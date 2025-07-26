@@ -1,0 +1,99 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.demo.springboot.grpc.generated";
+option java_outer_classname = "UserServiceProto";
+
+package userservice;
+
+// User message
+message User {
+  int64 id = 1;
+  string name = 2;
+  string email = 3;
+  string phone = 4;
+}
+
+// Request messages
+message CreateUserRequest {
+  string name = 1;
+  string email = 2;
+  string phone = 3;
+}
+
+message GetUserRequest {
+  int64 id = 1;
+}
+
+message UpdateUserRequest {
+  int64 id = 1;
+  string name = 2;
+  string email = 3;
+  string phone = 4;
+}
+
+message DeleteUserRequest {
+  int64 id = 1;
+}
+
+message GetAllUsersRequest {
+  int32 page = 1;
+  int32 size = 2;
+}
+
+message SearchUsersRequest {
+  string query = 1;
+}
+
+// Response messages
+message UserResponse {
+  User user = 1;
+  string message = 2;
+  bool success = 3;
+}
+
+message UsersResponse {
+  repeated User users = 1;
+  int32 total_count = 2;
+  bool success = 3;
+}
+
+message UserDeleteResponse {
+  bool success = 1;
+  string message = 2;
+}
+
+// Streaming messages
+message UserStreamRequest {
+  string filter = 1;
+}
+
+message UserBatchRequest {
+  repeated CreateUserRequest users = 1;
+}
+
+message UserBatchResponse {
+  repeated UserResponse responses = 1;
+  int32 successful_count = 2;
+  int32 failed_count = 3;
+}
+
+// User service definition
+service UserService {
+  // Unary RPCs
+  rpc CreateUser(CreateUserRequest) returns (UserResponse);
+  rpc GetUser(GetUserRequest) returns (UserResponse);
+  rpc UpdateUser(UpdateUserRequest) returns (UserResponse);
+  rpc DeleteUser(DeleteUserRequest) returns (UserDeleteResponse);
+  rpc GetAllUsers(GetAllUsersRequest) returns (UsersResponse);
+  rpc SearchUsers(SearchUsersRequest) returns (UsersResponse);
+  
+  // Server streaming RPC
+  rpc StreamUsers(UserStreamRequest) returns (stream User);
+  
+  // Client streaming RPC
+  rpc CreateUsersBatch(stream CreateUserRequest) returns (UserBatchResponse);
+  
+  // Bidirectional streaming RPC
+  rpc ProcessUserStream(stream CreateUserRequest) returns (stream UserResponse);
+}

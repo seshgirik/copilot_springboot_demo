@@ -1,0 +1,185 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Detecting the operating system and CPU architecture
+[INFO] ------------------------------------------------------------------------
+[INFO] os.detected.name: osx
+[INFO] os.detected.arch: aarch_64
+[INFO] os.detected.bitness: 64
+[INFO] os.detected.version: 15.5
+[INFO] os.detected.version.major: 15
+[INFO] os.detected.version.minor: 5
+[INFO] os.detected.classifier: osx-aarch_64
+[INFO] 
+[INFO] -----------------< com.demo:springboot-grpc-rest-demo >-----------------
+[INFO] Building springboot-grpc-rest-demo 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.2.12:run (default-cli) > test-compile @ springboot-grpc-rest-demo >>>
+[INFO] 
+[INFO] --- protobuf:0.6.1:compile (default) @ springboot-grpc-rest-demo ---
+[INFO] Compiling 2 proto file(s) to /Users/sekondav/Downloads/copilot_springboot_demo/target/generated-sources/protobuf/java
+[INFO] 
+[INFO] --- protobuf:0.6.1:compile-custom (default) @ springboot-grpc-rest-demo ---
+[INFO] Compiling 2 proto file(s) to /Users/sekondav/Downloads/copilot_springboot_demo/target/generated-sources/protobuf/grpc-java
+[INFO] 
+[INFO] --- build-helper:3.4.0:add-source (add-source) @ springboot-grpc-rest-demo ---
+[INFO] Source directory: /Users/sekondav/Downloads/copilot_springboot_demo/target/generated-sources/protobuf/java added.
+[INFO] Source directory: /Users/sekondav/Downloads/copilot_springboot_demo/target/generated-sources/protobuf/grpc-java added.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ springboot-grpc-rest-demo ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 2 resources from src/main/proto to target/classes
+[INFO] Copying 2 resources from src/main/proto to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ springboot-grpc-rest-demo ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 73 source files with javac [debug release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ springboot-grpc-rest-demo ---
+[INFO] skip non existing resourceDirectory /Users/sekondav/Downloads/copilot_springboot_demo/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ springboot-grpc-rest-demo ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 2 source files with javac [debug release 17] to target/test-classes
+[INFO] 
+[INFO] <<< spring-boot:3.2.12:run (default-cli) < test-compile @ springboot-grpc-rest-demo <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.2.12:run (default-cli) @ springboot-grpc-rest-demo ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v3.2.12)
+
+2025-07-12 16:31:44 [main] INFO  c.d.s.SpringbootGrpcRestDemoApplication - Starting SpringbootGrpcRestDemoApplication using Java 17.0.8 with PID 61959 (/Users/sekondav/Downloads/copilot_springboot_demo/target/classes started by sekondav in /Users/sekondav/Downloads/copilot_springboot_demo)
+2025-07-12 16:31:44 [main] DEBUG c.d.s.SpringbootGrpcRestDemoApplication - Running with Spring Boot v3.2.12, Spring v6.1.15
+2025-07-12 16:31:44 [main] INFO  c.d.s.SpringbootGrpcRestDemoApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-12 16:31:44 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-12 16:31:44 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 36 ms. Found 2 JPA repository interfaces.
+2025-07-12 16:31:44 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8085 (http)
+2025-07-12 16:31:44 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-12 16:31:44 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-07-12 16:31:44 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-12 16:31:44 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 697 ms
+2025-07-12 16:31:45 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-12 16:31:45 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-07-12 16:31:45 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-07-12 16:31:45 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-07-12 16:31:45 [main] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: loggingFilter urls=[/api/*] order=1, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2025-07-12 16:31:45 [main] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/], h2Console urls=[/h2-console/*]
+2025-07-12 16:31:45 [main] DEBUG c.d.s.config.HttpBodyLoggingFilter - Filter 'loggingFilter' configured for use
+2025-07-12 16:31:45 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-12 16:31:45 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.10.Final
+2025-07-12 16:31:45 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-07-12 16:31:45 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-12 16:31:45 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-12 16:31:45 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-12 16:31:45 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists products cascade 
+Hibernate: 
+    drop table if exists products cascade 
+2025-07-12 16:31:45 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists users cascade 
+2025-07-12 16:31:45 [main] DEBUG org.hibernate.SQL - 
+    create table products (
+        price numeric(38,2) not null,
+        quantity integer not null,
+        id bigint generated by default as identity,
+        name varchar(100) not null,
+        description varchar(500),
+        primary key (id)
+    )
+Hibernate: 
+    create table products (
+        price numeric(38,2) not null,
+        quantity integer not null,
+        id bigint generated by default as identity,
+        name varchar(100) not null,
+        description varchar(500),
+        primary key (id)
+    )
+2025-07-12 16:31:45 [main] DEBUG org.hibernate.SQL - 
+    create table users (
+        id bigint generated by default as identity,
+        phone varchar(15),
+        name varchar(100) not null,
+        email varchar(255) not null unique,
+        primary key (id)
+    )
+Hibernate: 
+    create table users (
+        id bigint generated by default as identity,
+        phone varchar(15),
+        name varchar(100) not null,
+        email varchar(255) not null unique,
+        primary key (id)
+    )
+2025-07-12 16:31:45 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-12 16:31:45 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-12 16:31:46 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-12 16:31:46 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 27 mappings in 'requestMappingHandlerMapping'
+2025-07-12 16:31:46 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-07-12 16:31:46 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-07-12 16:31:46 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-07-12 16:31:46 [main] DEBUG n.d.b.g.c.a.GrpcCommonCodecAutoConfiguration - Found GrpcCodecDiscoverer -> Creating custom CompressorRegistry
+2025-07-12 16:31:46 [main] DEBUG n.d.b.g.c.c.AnnotationGrpcCodecDiscoverer - Searching for codecs...
+2025-07-12 16:31:46 [main] DEBUG n.d.b.g.c.c.AnnotationGrpcCodecDiscoverer - Done
+2025-07-12 16:31:46 [main] DEBUG n.d.b.g.c.a.GrpcCommonCodecAutoConfiguration - Found GrpcCodecDiscoverer -> Creating custom DecompressorRegistry
+2025-07-12 16:31:46 [main] INFO  n.d.b.g.s.a.GrpcServerFactoryAutoConfiguration - Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
+2025-07-12 16:31:46 [main] DEBUG n.d.b.g.s.i.AnnotationGlobalServerInterceptorConfigurer - Registering GlobalServerInterceptor: grpcLoggingInterceptor (com.demo.springboot.config.GrpcLoggingInterceptor@205b73d8)
+2025-07-12 16:31:46 [main] DEBUG n.d.b.g.s.i.AnnotationGlobalServerInterceptorConfigurer - Registering GlobalServerInterceptor: grpcRequestScope (net.devh.boot.grpc.server.scope.GrpcRequestScope@324c3ed5)
+2025-07-12 16:31:46 [main] DEBUG n.d.b.g.s.s.AnnotationGrpcServiceDiscoverer - Found gRPC service: productservice.ProductService, bean: productGrpcServiceImpl, class: com.demo.springboot.grpc.service.ProductGrpcServiceImpl
+2025-07-12 16:31:46 [main] DEBUG n.d.b.g.s.s.AnnotationGrpcServiceDiscoverer - Found gRPC service: userservice.UserService, bean: userGrpcServiceImpl, class: com.demo.springboot.grpc.service.UserGrpcServiceImpl
+2025-07-12 16:31:46 [main] DEBUG n.d.b.g.s.s.AnnotationGrpcServiceDiscoverer - Found gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.protobuf.services.HealthServiceImpl
+2025-07-12 16:31:46 [main] DEBUG n.d.b.g.s.s.AnnotationGrpcServiceDiscoverer - Found gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
+2025-07-12 16:31:46 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-07-12 16:31:46 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-12 16:31:46 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists products cascade 
+Hibernate: 
+    drop table if exists products cascade 
+2025-07-12 16:31:46 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists users cascade 
+2025-07-12 16:31:46 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-07-12 16:31:46 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-07-12 16:31:46 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-12 16:31:46 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8085 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8085 or configure this application to listen on another port.
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.647 s
+[INFO] Finished at: 2025-07-12T16:31:46+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.2.12:run (default-cli) on project springboot-grpc-rest-demo: Process terminated with exit code: 1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

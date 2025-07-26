@@ -1,0 +1,105 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.demo.springboot.grpc.generated";
+option java_outer_classname = "ProductServiceProto";
+
+package productservice;
+
+// Product message
+message Product {
+  int64 id = 1;
+  string name = 2;
+  string description = 3;
+  double price = 4;
+  int32 quantity = 5;
+}
+
+// Request messages
+message CreateProductRequest {
+  string name = 1;
+  string description = 2;
+  double price = 3;
+  int32 quantity = 4;
+}
+
+message GetProductRequest {
+  int64 id = 1;
+}
+
+message UpdateProductRequest {
+  int64 id = 1;
+  string name = 2;
+  string description = 3;
+  double price = 4;
+  int32 quantity = 5;
+}
+
+message DeleteProductRequest {
+  int64 id = 1;
+}
+
+message GetAllProductsRequest {
+  int32 page = 1;
+  int32 size = 2;
+}
+
+message SearchProductsRequest {
+  string query = 1;
+  double min_price = 2;
+  double max_price = 3;
+}
+
+// Response messages
+message ProductResponse {
+  Product product = 1;
+  string message = 2;
+  bool success = 3;
+}
+
+message ProductsResponse {
+  repeated Product products = 1;
+  int32 total_count = 2;
+  bool success = 3;
+}
+
+message ProductDeleteResponse {
+  bool success = 1;
+  string message = 2;
+}
+
+// Streaming messages
+message ProductStreamRequest {
+  string category = 1;
+  double max_price = 2;
+}
+
+message ProductBatchRequest {
+  repeated CreateProductRequest products = 1;
+}
+
+message ProductBatchResponse {
+  repeated ProductResponse responses = 1;
+  int32 successful_count = 2;
+  int32 failed_count = 3;
+}
+
+// Product service definition
+service ProductService {
+  // Unary RPCs
+  rpc CreateProduct(CreateProductRequest) returns (ProductResponse);
+  rpc GetProduct(GetProductRequest) returns (ProductResponse);
+  rpc UpdateProduct(UpdateProductRequest) returns (ProductResponse);
+  rpc DeleteProduct(DeleteProductRequest) returns (ProductDeleteResponse);
+  rpc GetAllProducts(GetAllProductsRequest) returns (ProductsResponse);
+  rpc SearchProducts(SearchProductsRequest) returns (ProductsResponse);
+  
+  // Server streaming RPC
+  rpc StreamProducts(ProductStreamRequest) returns (stream Product);
+  
+  // Client streaming RPC
+  rpc CreateProductsBatch(stream CreateProductRequest) returns (ProductBatchResponse);
+  
+  // Bidirectional streaming RPC
+  rpc ProcessProductStream(stream CreateProductRequest) returns (stream ProductResponse);
+}

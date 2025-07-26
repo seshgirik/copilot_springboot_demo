@@ -1,0 +1,11 @@
+/Users/sekondav/Downloads/copilot_springboot_demo/src/test/java/com/demo/springboot/integration/ApplicationIntegrationTest.java
+/Users/sekondav/Downloads/copilot_springboot_demo/src/test/java/com/demo/springboot/SpringbootGrpcRestDemoApplicationTests.java
+/Users/sekondav/Downloads/copilot_springboot_demo/src/test/java/com/demo/springboot/repository/ProductRepositoryTest.java
+/Users/sekondav/Downloads/copilot_springboot_demo/src/test/java/com/demo/springboot/grpc/service/ProductGrpcServiceImplTest.java
+/Users/sekondav/Downloads/copilot_springboot_demo/src/test/java/com/demo/springboot/controller/ProductControllerTest.java
+/Users/sekondav/Downloads/copilot_springboot_demo/src/test/java/com/demo/springboot/service/UserServiceTest.java
+/Users/sekondav/Downloads/copilot_springboot_demo/src/test/java/com/demo/springboot/service/ProductServiceTest.java
+/Users/sekondav/Downloads/copilot_springboot_demo/src/test/java/com/demo/springboot/grpc/service/UserGrpcServiceImplTest.java
+/Users/sekondav/Downloads/copilot_springboot_demo/src/test/java/com/demo/springboot/repository/UserRepositoryTest.java
+/Users/sekondav/Downloads/copilot_springboot_demo/src/test/java/com/demo/springboot/config/WebMvcConfigTest.java
+/Users/sekondav/Downloads/copilot_springboot_demo/src/test/java/com/demo/springboot/controller/UserControllerTest.java
