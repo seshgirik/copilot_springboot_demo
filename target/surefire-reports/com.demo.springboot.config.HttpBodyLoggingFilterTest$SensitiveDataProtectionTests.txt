@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: com.demo.springboot.config.HttpBodyLoggingFilterTest$SensitiveDataProtectionTests
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.107 s <<< FAILURE! -- in com.demo.springboot.config.HttpBodyLoggingFilterTest$SensitiveDataProtectionTests
+com.demo.springboot.config.HttpBodyLoggingFilterTest$SensitiveDataProtectionTests.shouldLogNonSensitiveEndpoints -- Time elapsed: 0.100 s <<< FAILURE!
+Argument(s) are different! Wanted:
+filterChain.doFilter(
+    org.springframework.mock.web.MockHttpServletRequest@397fced4,
+    org.springframework.mock.web.MockHttpServletResponse@75f67ea7
+);
+-> at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:122)
+Actual invocations have different arguments at positions [0, 1]:
+filterChain.doFilter(
+    org.springframework.web.util.ContentCachingRequestWrapper@5f2788f2,
+    org.springframework.web.util.ContentCachingResponseWrapper@549561ab
+);
+-> at com.demo.springboot.config.HttpBodyLoggingFilter.doFilterInternal(HttpBodyLoggingFilter.java:43)
+
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:122)
+	at com.demo.springboot.config.HttpBodyLoggingFilterTest$SensitiveDataProtectionTests.shouldLogNonSensitiveEndpoints(HttpBodyLoggingFilterTest.java:364)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+

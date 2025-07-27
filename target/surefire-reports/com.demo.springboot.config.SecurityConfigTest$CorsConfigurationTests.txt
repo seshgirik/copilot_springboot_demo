@@ -1,0 +1,64 @@
+-------------------------------------------------------------------------------
+Test set: com.demo.springboot.config.SecurityConfigTest$CorsConfigurationTests
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.005 s <<< FAILURE! -- in com.demo.springboot.config.SecurityConfigTest$CorsConfigurationTests
+com.demo.springboot.config.SecurityConfigTest$CorsConfigurationTests.shouldHandleEmptyAllowedOrigins -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "String.length()" because "source" is null
+	at org.springframework.util.StringUtils.uriDecode(StringUtils.java:815)
+	at org.springframework.web.util.UriUtils.decode(UriUtils.java:372)
+	at org.springframework.web.util.UrlPathHelper.decodeInternal(UrlPathHelper.java:573)
+	at org.springframework.web.util.UrlPathHelper.decodeRequestString(UrlPathHelper.java:564)
+	at org.springframework.web.util.UrlPathHelper.getContextPath(UrlPathHelper.java:453)
+	at org.springframework.web.util.UrlPathHelper.getPathWithinApplication(UrlPathHelper.java:347)
+	at org.springframework.web.util.UrlPathHelper.getLookupPathForRequest(UrlPathHelper.java:244)
+	at org.springframework.web.cors.UrlBasedCorsConfigurationSource.resolvePath(UrlBasedCorsConfigurationSource.java:260)
+	at org.springframework.web.cors.UrlBasedCorsConfigurationSource.getCorsConfiguration(UrlBasedCorsConfigurationSource.java:244)
+	at com.demo.springboot.config.SecurityConfigTest$CorsConfigurationTests.shouldHandleEmptyAllowedOrigins(SecurityConfigTest.java:93)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.demo.springboot.config.SecurityConfigTest$CorsConfigurationTests.shouldConfigureCorsWithMultipleAllowedOrigins -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "String.length()" because "source" is null
+	at org.springframework.util.StringUtils.uriDecode(StringUtils.java:815)
+	at org.springframework.web.util.UriUtils.decode(UriUtils.java:372)
+	at org.springframework.web.util.UrlPathHelper.decodeInternal(UrlPathHelper.java:573)
+	at org.springframework.web.util.UrlPathHelper.decodeRequestString(UrlPathHelper.java:564)
+	at org.springframework.web.util.UrlPathHelper.getContextPath(UrlPathHelper.java:453)
+	at org.springframework.web.util.UrlPathHelper.getPathWithinApplication(UrlPathHelper.java:347)
+	at org.springframework.web.util.UrlPathHelper.getLookupPathForRequest(UrlPathHelper.java:244)
+	at org.springframework.web.cors.UrlBasedCorsConfigurationSource.resolvePath(UrlBasedCorsConfigurationSource.java:260)
+	at org.springframework.web.cors.UrlBasedCorsConfigurationSource.getCorsConfiguration(UrlBasedCorsConfigurationSource.java:244)
+	at com.demo.springboot.config.SecurityConfigTest$CorsConfigurationTests.shouldConfigureCorsWithMultipleAllowedOrigins(SecurityConfigTest.java:80)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.demo.springboot.config.SecurityConfigTest$CorsConfigurationTests.shouldHandleNullAllowedOrigins -- Time elapsed: 0 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "String.split(String)" because "this.allowedOrigins" is null
+	at com.demo.springboot.config.SecurityConfig.corsConfigurationSource(SecurityConfig.java:76)
+	at com.demo.springboot.config.SecurityConfigTest$CorsConfigurationTests.shouldHandleNullAllowedOrigins(SecurityConfigTest.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.demo.springboot.config.SecurityConfigTest$CorsConfigurationTests.shouldConfigureCorsWithDefaultAllowedOrigins -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "String.length()" because "source" is null
+	at org.springframework.util.StringUtils.uriDecode(StringUtils.java:815)
+	at org.springframework.web.util.UriUtils.decode(UriUtils.java:372)
+	at org.springframework.web.util.UrlPathHelper.decodeInternal(UrlPathHelper.java:573)
+	at org.springframework.web.util.UrlPathHelper.decodeRequestString(UrlPathHelper.java:564)
+	at org.springframework.web.util.UrlPathHelper.getContextPath(UrlPathHelper.java:453)
+	at org.springframework.web.util.UrlPathHelper.getPathWithinApplication(UrlPathHelper.java:347)
+	at org.springframework.web.util.UrlPathHelper.getLookupPathForRequest(UrlPathHelper.java:244)
+	at org.springframework.web.cors.UrlBasedCorsConfigurationSource.resolvePath(UrlBasedCorsConfigurationSource.java:260)
+	at org.springframework.web.cors.UrlBasedCorsConfigurationSource.getCorsConfiguration(UrlBasedCorsConfigurationSource.java:244)
+	at com.demo.springboot.config.SecurityConfigTest$CorsConfigurationTests.shouldConfigureCorsWithDefaultAllowedOrigins(SecurityConfigTest.java:65)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+

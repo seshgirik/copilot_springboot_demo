@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.demo.springboot.repository.ProductRepositoryTest$DataValidationTests" time="2.014" tests="5" errors="0" skipped="0" failures="2">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/sekondav/Documents/GitHub/copilot_springboot_demo/target/test-classes:/Users/sekondav/Documents/GitHub/copilot_springboot_demo/target/classes:/Users/sekondav/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.2.12/spring-boot-starter-web-3.2.12.jar:/Users/sekondav/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.12/spring-boot-starter-3.2.12.jar:/Users/sekondav/.m2/repository/org/springframework/boot/spring-boot/3.2.12/spring-boot-3.2.12.jar:/Users/sekondav/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.12/spring-boot-autoconfigure-3.2.12.jar:/Users/sekondav/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.2.12/spring-boot-starter-logging-3.2.12.jar:/Users/sekondav/.m2/repository/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14.jar:/Users/sekondav/.m2/repository/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14.jar:/Users/sekondav/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/Users/sekondav/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/sekondav/.m2/repository/org/slf4j/jul-to-slf4j/2.0.16/jul-to-slf4j-2.0.16.jar:/Users/sekondav/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/sekondav/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/sekondav/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.2.12/spring-boot-starter-json-3.2.12.jar:/Users/sekondav/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.4/jackson-datatype-jdk8-2.15.4.jar:/Users/sekondav/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.4/jackson-datatype-jsr310-2.15.4.jar:/Users/sekondav/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.4/jackson-module-parameter-names-2.15.4.jar:/Users/sekondav/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.2.12/spring-boot-starter-tomcat-3.2.12.jar:/Users/sekondav/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.33/tomcat-embed-core-10.1.33.jar:/Users/sekondav/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.33/tomcat-embed-websocket-10.1.33.jar:/Users/sekondav/.m2/repository/org/springframework/spring-web/6.1.15/spring-web-6.1.15.jar:/Users/sekondav/.m2/repository/org/springframework/spring-beans/6.1.15/spring-beans-6.1.15.jar:/Users/sekondav/.m2/repository/io/micrometer/micrometer-observation/1.12.13/micrometer-observation-1.12.13.jar:/Users/sekondav/.m2/repository/io/micrometer/micrometer-commons/1.12.13/micrometer-commons-1.12.13.jar:/Users/sekondav/.m2/repository/org/springframework/spring-webmvc/6.1.15/spring-webmvc-6.1.15.jar:/Users/sekondav/.m2/repository/org/springframework/spring-context/6.1.15/spring-context-6.1.15.jar:/Users/sekondav/.m2/repository/org/springframework/spring-expression/6.1.15/spring-expression-6.1.15.jar:/Users/sekondav/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.2.12/spring-boot-starter-data-jpa-3.2.12.jar:/Users/sekondav/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.2.12/spring-boot-starter-aop-3.2.12.jar:/Users/sekondav/.m2/repository/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1.jar:/Users/sekondav/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.2.12/spring-boot-starter-jdbc-3.2.12.jar:/Users/sekondav/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/sekondav/.m2/repository/org/springframework/spring-jdbc/6.1.15/spring-jdbc-6.1.15.jar:/Users/sekondav/.m2/repository/org/hibernate/orm/hibernate-core/6.4.10.Final/hibernate-core-6.4.10.Final.jar:/Users/sekondav/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/sekondav/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/sekondav/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/sekondav/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/sekondav/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/Users/sekondav/.m2/repository/com/fasterxml/classmate/1.6.0/classmate-1.6.0.jar:/Users/sekondav/.m2/repository/net/bytebuddy/byte-buddy/1.14.19/byte-buddy-1.14.19.jar:/Users/sekondav/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/Users/sekondav/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/Users/sekondav/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/Users/sekondav/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/Users/sekondav/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/sekondav/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/sekondav/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/Users/sekondav/.m2/repository/org/springframework/data/spring-data-jpa/3.2.12/spring-data-jpa-3.2.12.jar:/Users/sekondav/.m2/repository/org/springframework/data/spring-data-commons/3.2.12/spring-data-commons-3.2.12.jar:/Users/sekondav/.m2/repository/org/springframework/spring-orm/6.1.15/spring-orm-6.1.15.jar:/Users/sekondav/.m2/repository/org/springframework/spring-tx/6.1.15/spring-tx-6.1.15.jar:/Users/sekondav/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar:/Users/sekondav/.m2/repository/org/springframework/spring-aspects/6.1.15/spring-aspects-6.1.15.jar:/Users/sekondav/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.2.12/spring-boot-starter-validation-3.2.12.jar:/Users/sekondav/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.33/tomcat-embed-el-10.1.33.jar:/Users/sekondav/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/Users/sekondav/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/sekondav/.m2/repository/com/h2database/h2/2.2.224/h2-2.2.224.jar:/Users/sekondav/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.3.0/springdoc-openapi-starter-webmvc-ui-2.3.0.jar:/Users/sekondav/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/2.3.0/springdoc-openapi-starter-webmvc-api-2.3.0.jar:/Users/sekondav/.m2/repository/org/springdoc/springdoc-openapi-starter-common/2.3.0/springdoc-openapi-starter-common-2.3.0.jar:/Users/sekondav/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.19/swagger-core-jakarta-2.2.19.jar:/Users/sekondav/.m2/repository/org/apache/commons/commons-lang3/3.13.0/commons-lang3-3.13.0.jar:/Users/sekondav/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.19/swagger-annotations-jakarta-2.2.19.jar:/Users/sekondav/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.19/swagger-models-jakarta-2.2.19.jar:/Users/sekondav/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.15.4/jackson-dataformat-yaml-2.15.4.jar:/Users/sekondav/.m2/repository/org/webjars/swagger-ui/5.10.3/swagger-ui-5.10.3.jar:/Users/sekondav/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.2.12/spring-boot-starter-security-3.2.12.jar:/Users/sekondav/.m2/repository/org/springframework/spring-aop/6.1.15/spring-aop-6.1.15.jar:/Users/sekondav/.m2/repository/org/springframework/security/spring-security-config/6.2.8/spring-security-config-6.2.8.jar:/Users/sekondav/.m2/repository/org/springframework/security/spring-security-core/6.2.8/spring-security-core-6.2.8.jar:/Users/sekondav/.m2/repository/org/springframework/security/spring-security-crypto/6.2.8/spring-security-crypto-6.2.8.jar:/Users/sekondav/.m2/repository/org/springframework/security/spring-security-web/6.2.8/spring-security-web-6.2.8.jar:/Users/sekondav/.m2/repository/io/jsonwebtoken/jjwt-api/0.12.3/jjwt-api-0.12.3.jar:/Users/sekondav/.m2/repository/io/jsonwebtoken/jjwt-impl/0.12.3/jjwt-impl-0.12.3.jar:/Users/sekondav/.m2/repository/io/jsonwebtoken/jjwt-jackson/0.12.3/jjwt-jackson-0.12.3.jar:/Users/sekondav/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.4/jackson-databind-2.15.4.jar:/Users/sekondav/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.4/jackson-annotations-2.15.4.jar:/Users/sekondav/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.4/jackson-core-2.15.4.jar:/Users/sekondav/.m2/repository/com/github/vladimir-bukhtoyarov/bucket4j-core/7.6.0/bucket4j-core-7.6.0.jar:/Users/sekondav/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.2.12/spring-boot-starter-test-3.2.12.jar:/Users/sekondav/.m2/repository/org/springframework/boot/spring-boot-test/3.2.12/spring-boot-test-3.2.12.jar:/Users/sekondav/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.2.12/spring-boot-test-autoconfigure-3.2.12.jar:/Users/sekondav/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/Users/sekondav/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/Users/sekondav/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/Users/sekondav/.m2/repository/net/minidev/json-smart/2.5.1/json-smart-2.5.1.jar:/Users/sekondav/.m2/repository/net/minidev/accessors-smart/2.5.1/accessors-smart-2.5.1.jar:/Users/sekondav/.m2/repository/org/ow2/asm/asm/9.6/asm-9.6.jar:/Users/sekondav/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/sekondav/.m2/repository/org/awaitility/awaitility/4.2.2/awaitility-4.2.2.jar:/Users/sekondav/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/sekondav/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.5/junit-jupiter-5.10.5.jar:/Users/sekondav/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.5/junit-jupiter-api-5.10.5.jar:/Users/sekondav/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/sekondav/.m2/repository/org/junit/platform/junit-platform-commons/1.10.5/junit-platform-commons-1.10.5.jar:/Users/sekondav/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/sekondav/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.5/junit-jupiter-params-5.10.5.jar:/Users/sekondav/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.5/junit-jupiter-engine-5.10.5.jar:/Users/sekondav/.m2/repository/org/junit/platform/junit-platform-engine/1.10.5/junit-platform-engine-1.10.5.jar:/Users/sekondav/.m2/repository/org/mockito/mockito-core/5.7.0/mockito-core-5.7.0.jar:/Users/sekondav/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.jar:/Users/sekondav/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/sekondav/.m2/repository/org/mockito/mockito-junit-jupiter/5.7.0/mockito-junit-jupiter-5.7.0.jar:/Users/sekondav/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/Users/sekondav/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/sekondav/.m2/repository/org/springframework/spring-core/6.1.15/spring-core-6.1.15.jar:/Users/sekondav/.m2/repository/org/springframework/spring-jcl/6.1.15/spring-jcl-6.1.15.jar:/Users/sekondav/.m2/repository/org/springframework/spring-test/6.1.15/spring-test-6.1.15.jar:/Users/sekondav/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/sekondav/.m2/repository/io/grpc/grpc-testing/1.59.0/grpc-testing-1.59.0.jar:/Users/sekondav/.m2/repository/io/grpc/grpc-inprocess/1.59.0/grpc-inprocess-1.59.0.jar:/Users/sekondav/.m2/repository/io/grpc/grpc-core/1.59.0/grpc-core-1.59.0.jar:/Users/sekondav/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/Users/sekondav/.m2/repository/com/google/android/annotations/4.1.1.4/annotations-4.1.1.4.jar:/Users/sekondav/.m2/repository/io/perfmark/perfmark-api/0.26.0/perfmark-api-0.26.0.jar:/Users/sekondav/.m2/repository/io/grpc/grpc-context/1.59.0/grpc-context-1.59.0.jar:/Users/sekondav/.m2/repository/com/google/guava/guava/32.0.1-android/guava-32.0.1-android.jar:/Users/sekondav/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/sekondav/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/sekondav/.m2/repository/org/checkerframework/checker-qual/3.33.0/checker-qual-3.33.0.jar:/Users/sekondav/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/Users/sekondav/.m2/repository/io/grpc/grpc-util/1.59.0/grpc-util-1.59.0.jar:/Users/sekondav/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.23/animal-sniffer-annotations-1.23.jar:/Users/sekondav/.m2/repository/io/grpc/grpc-stub/1.59.0/grpc-stub-1.59.0.jar:/Users/sekondav/.m2/repository/com/google/errorprone/error_prone_annotations/2.20.0/error_prone_annotations-2.20.0.jar:/Users/sekondav/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/sekondav/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/Users/sekondav/.m2/repository/io/grpc/grpc-api/1.59.0/grpc-api-1.59.0.jar:/Users/sekondav/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Asia/Kolkata"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/sekondav/Documents/GitHub/copilot_springboot_demo/target/surefire/surefirebooter-20250726232155760_3.jar /Users/sekondav/Documents/GitHub/copilot_springboot_demo/target/surefire 2025-07-26T23-21-55_709-jvmRun1 surefire-20250726232155760_1tmp surefire_0-20250726232155760_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="*Test"/>
+    <property name="surefire.test.class.path" value="/Users/sekondav/Documents/GitHub/copilot_springboot_demo/target/test-classes:/Users/sekondav/Documents/GitHub/copilot_springboot_demo/target/classes:/Users/sekondav/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.2.12/spring-boot-starter-web-3.2.12.jar:/Users/sekondav/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.12/spring-boot-starter-3.2.12.jar:/Users/sekondav/.m2/repository/org/springframework/boot/spring-boot/3.2.12/spring-boot-3.2.12.jar:/Users/sekondav/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.12/spring-boot-autoconfigure-3.2.12.jar:/Users/sekondav/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.2.12/spring-boot-starter-logging-3.2.12.jar:/Users/sekondav/.m2/repository/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14.jar:/Users/sekondav/.m2/repository/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14.jar:/Users/sekondav/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/Users/sekondav/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/sekondav/.m2/repository/org/slf4j/jul-to-slf4j/2.0.16/jul-to-slf4j-2.0.16.jar:/Users/sekondav/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/sekondav/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/sekondav/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.2.12/spring-boot-starter-json-3.2.12.jar:/Users/sekondav/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.4/jackson-datatype-jdk8-2.15.4.jar:/Users/sekondav/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.4/jackson-datatype-jsr310-2.15.4.jar:/Users/sekondav/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.4/jackson-module-parameter-names-2.15.4.jar:/Users/sekondav/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.2.12/spring-boot-starter-tomcat-3.2.12.jar:/Users/sekondav/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.33/tomcat-embed-core-10.1.33.jar:/Users/sekondav/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.33/tomcat-embed-websocket-10.1.33.jar:/Users/sekondav/.m2/repository/org/springframework/spring-web/6.1.15/spring-web-6.1.15.jar:/Users/sekondav/.m2/repository/org/springframework/spring-beans/6.1.15/spring-beans-6.1.15.jar:/Users/sekondav/.m2/repository/io/micrometer/micrometer-observation/1.12.13/micrometer-observation-1.12.13.jar:/Users/sekondav/.m2/repository/io/micrometer/micrometer-commons/1.12.13/micrometer-commons-1.12.13.jar:/Users/sekondav/.m2/repository/org/springframework/spring-webmvc/6.1.15/spring-webmvc-6.1.15.jar:/Users/sekondav/.m2/repository/org/springframework/spring-context/6.1.15/spring-context-6.1.15.jar:/Users/sekondav/.m2/repository/org/springframework/spring-expression/6.1.15/spring-expression-6.1.15.jar:/Users/sekondav/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.2.12/spring-boot-starter-data-jpa-3.2.12.jar:/Users/sekondav/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.2.12/spring-boot-starter-aop-3.2.12.jar:/Users/sekondav/.m2/repository/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1.jar:/Users/sekondav/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.2.12/spring-boot-starter-jdbc-3.2.12.jar:/Users/sekondav/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/sekondav/.m2/repository/org/springframework/spring-jdbc/6.1.15/spring-jdbc-6.1.15.jar:/Users/sekondav/.m2/repository/org/hibernate/orm/hibernate-core/6.4.10.Final/hibernate-core-6.4.10.Final.jar:/Users/sekondav/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/sekondav/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/sekondav/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/sekondav/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/sekondav/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/Users/sekondav/.m2/repository/com/fasterxml/classmate/1.6.0/classmate-1.6.0.jar:/Users/sekondav/.m2/repository/net/bytebuddy/byte-buddy/1.14.19/byte-buddy-1.14.19.jar:/Users/sekondav/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/Users/sekondav/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/Users/sekondav/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/Users/sekondav/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/Users/sekondav/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/sekondav/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/sekondav/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/Users/sekondav/.m2/repository/org/springframework/data/spring-data-jpa/3.2.12/spring-data-jpa-3.2.12.jar:/Users/sekondav/.m2/repository/org/springframework/data/spring-data-commons/3.2.12/spring-data-commons-3.2.12.jar:/Users/sekondav/.m2/repository/org/springframework/spring-orm/6.1.15/spring-orm-6.1.15.jar:/Users/sekondav/.m2/repository/org/springframework/spring-tx/6.1.15/spring-tx-6.1.15.jar:/Users/sekondav/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar:/Users/sekondav/.m2/repository/org/springframework/spring-aspects/6.1.15/spring-aspects-6.1.15.jar:/Users/sekondav/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.2.12/spring-boot-starter-validation-3.2.12.jar:/Users/sekondav/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.33/tomcat-embed-el-10.1.33.jar:/Users/sekondav/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/Users/sekondav/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/sekondav/.m2/repository/com/h2database/h2/2.2.224/h2-2.2.224.jar:/Users/sekondav/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.3.0/springdoc-openapi-starter-webmvc-ui-2.3.0.jar:/Users/sekondav/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/2.3.0/springdoc-openapi-starter-webmvc-api-2.3.0.jar:/Users/sekondav/.m2/repository/org/springdoc/springdoc-openapi-starter-common/2.3.0/springdoc-openapi-starter-common-2.3.0.jar:/Users/sekondav/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.19/swagger-core-jakarta-2.2.19.jar:/Users/sekondav/.m2/repository/org/apache/commons/commons-lang3/3.13.0/commons-lang3-3.13.0.jar:/Users/sekondav/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.19/swagger-annotations-jakarta-2.2.19.jar:/Users/sekondav/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.19/swagger-models-jakarta-2.2.19.jar:/Users/sekondav/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.15.4/jackson-dataformat-yaml-2.15.4.jar:/Users/sekondav/.m2/repository/org/webjars/swagger-ui/5.10.3/swagger-ui-5.10.3.jar:/Users/sekondav/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.2.12/spring-boot-starter-security-3.2.12.jar:/Users/sekondav/.m2/repository/org/springframework/spring-aop/6.1.15/spring-aop-6.1.15.jar:/Users/sekondav/.m2/repository/org/springframework/security/spring-security-config/6.2.8/spring-security-config-6.2.8.jar:/Users/sekondav/.m2/repository/org/springframework/security/spring-security-core/6.2.8/spring-security-core-6.2.8.jar:/Users/sekondav/.m2/repository/org/springframework/security/spring-security-crypto/6.2.8/spring-security-crypto-6.2.8.jar:/Users/sekondav/.m2/repository/org/springframework/security/spring-security-web/6.2.8/spring-security-web-6.2.8.jar:/Users/sekondav/.m2/repository/io/jsonwebtoken/jjwt-api/0.12.3/jjwt-api-0.12.3.jar:/Users/sekondav/.m2/repository/io/jsonwebtoken/jjwt-impl/0.12.3/jjwt-impl-0.12.3.jar:/Users/sekondav/.m2/repository/io/jsonwebtoken/jjwt-jackson/0.12.3/jjwt-jackson-0.12.3.jar:/Users/sekondav/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.4/jackson-databind-2.15.4.jar:/Users/sekondav/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.4/jackson-annotations-2.15.4.jar:/Users/sekondav/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.4/jackson-core-2.15.4.jar:/Users/sekondav/.m2/repository/com/github/vladimir-bukhtoyarov/bucket4j-core/7.6.0/bucket4j-core-7.6.0.jar:/Users/sekondav/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.2.12/spring-boot-starter-test-3.2.12.jar:/Users/sekondav/.m2/repository/org/springframework/boot/spring-boot-test/3.2.12/spring-boot-test-3.2.12.jar:/Users/sekondav/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.2.12/spring-boot-test-autoconfigure-3.2.12.jar:/Users/sekondav/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/Users/sekondav/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/Users/sekondav/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/Users/sekondav/.m2/repository/net/minidev/json-smart/2.5.1/json-smart-2.5.1.jar:/Users/sekondav/.m2/repository/net/minidev/accessors-smart/2.5.1/accessors-smart-2.5.1.jar:/Users/sekondav/.m2/repository/org/ow2/asm/asm/9.6/asm-9.6.jar:/Users/sekondav/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/sekondav/.m2/repository/org/awaitility/awaitility/4.2.2/awaitility-4.2.2.jar:/Users/sekondav/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/sekondav/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.5/junit-jupiter-5.10.5.jar:/Users/sekondav/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.5/junit-jupiter-api-5.10.5.jar:/Users/sekondav/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/sekondav/.m2/repository/org/junit/platform/junit-platform-commons/1.10.5/junit-platform-commons-1.10.5.jar:/Users/sekondav/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/sekondav/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.5/junit-jupiter-params-5.10.5.jar:/Users/sekondav/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.5/junit-jupiter-engine-5.10.5.jar:/Users/sekondav/.m2/repository/org/junit/platform/junit-platform-engine/1.10.5/junit-platform-engine-1.10.5.jar:/Users/sekondav/.m2/repository/org/mockito/mockito-core/5.7.0/mockito-core-5.7.0.jar:/Users/sekondav/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.jar:/Users/sekondav/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/sekondav/.m2/repository/org/mockito/mockito-junit-jupiter/5.7.0/mockito-junit-jupiter-5.7.0.jar:/Users/sekondav/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/Users/sekondav/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/sekondav/.m2/repository/org/springframework/spring-core/6.1.15/spring-core-6.1.15.jar:/Users/sekondav/.m2/repository/org/springframework/spring-jcl/6.1.15/spring-jcl-6.1.15.jar:/Users/sekondav/.m2/repository/org/springframework/spring-test/6.1.15/spring-test-6.1.15.jar:/Users/sekondav/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/sekondav/.m2/repository/io/grpc/grpc-testing/1.59.0/grpc-testing-1.59.0.jar:/Users/sekondav/.m2/repository/io/grpc/grpc-inprocess/1.59.0/grpc-inprocess-1.59.0.jar:/Users/sekondav/.m2/repository/io/grpc/grpc-core/1.59.0/grpc-core-1.59.0.jar:/Users/sekondav/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/Users/sekondav/.m2/repository/com/google/android/annotations/4.1.1.4/annotations-4.1.1.4.jar:/Users/sekondav/.m2/repository/io/perfmark/perfmark-api/0.26.0/perfmark-api-0.26.0.jar:/Users/sekondav/.m2/repository/io/grpc/grpc-context/1.59.0/grpc-context-1.59.0.jar:/Users/sekondav/.m2/repository/com/google/guava/guava/32.0.1-android/guava-32.0.1-android.jar:/Users/sekondav/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/sekondav/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/sekondav/.m2/repository/org/checkerframework/checker-qual/3.33.0/checker-qual-3.33.0.jar:/Users/sekondav/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/Users/sekondav/.m2/repository/io/grpc/grpc-util/1.59.0/grpc-util-1.59.0.jar:/Users/sekondav/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.23/animal-sniffer-annotations-1.23.jar:/Users/sekondav/.m2/repository/io/grpc/grpc-stub/1.59.0/grpc-stub-1.59.0.jar:/Users/sekondav/.m2/repository/com/google/errorprone/error_prone_annotations/2.20.0/error_prone_annotations-2.20.0.jar:/Users/sekondav/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/sekondav/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/Users/sekondav/.m2/repository/io/grpc/grpc-api/1.59.0/grpc-api-1.59.0.jar:/Users/sekondav/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/sekondav"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-07-18"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="style.color" value="always"/>
+    <property name="basedir" value="/Users/sekondav/Documents/GitHub/copilot_springboot_demo"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="jansi.force" value="true"/>
+    <property name="surefire.real.class.path" value="/Users/sekondav/Documents/GitHub/copilot_springboot_demo/target/surefire/surefirebooter-20250726232155760_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.8+7"/>
+    <property name="user.name" value="sekondav"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="15.5"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-17.0.8+7"/>
+    <property name="localRepository" value="/Users/sekondav/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/9q/44zkj66j4l99t4rj54j68jxm0000gn/T/"/>
+    <property name="java.version" value="17.0.8"/>
+    <property name="user.dir" value="/Users/sekondav/Documents/GitHub/copilot_springboot_demo"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="maven.color" value="true"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="84057"/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/sekondav/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="17.0.8+7"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="java.class.version" value="61.0"/>
+    <property name="CONSOLE_LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"/>
+    <property name="LOGGED_APPLICATION_NAME" value="[springboot-grpc-rest-demo] "/>
+  </properties>
+  <testcase name="shouldHandleQuantityComparisonProperly" classname="com.demo.springboot.repository.ProductRepositoryTest$DataValidationTests" time="0.423">
+    <failure message="&#10;Expected size: 1 but was: 2 in:&#10;[Product{id=5, name=&apos;Mouse&apos;, description=&apos;Wireless optical mouse&apos;, price=29.99, quantity=50},&#10;    Product{id=6, name=&apos;iPhone 15&apos;, description=&apos;Latest Apple smartphone&apos;, price=999.99, quantity=50}]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+
+Expected size: 1 but was: 2 in:
+[Product{id=5, name='Mouse', description='Wireless optical mouse', price=29.99, quantity=50},
+    Product{id=6, name='iPhone 15', description='Latest Apple smartphone', price=999.99, quantity=50}]
+	at com.demo.springboot.repository.ProductRepositoryTest$DataValidationTests.shouldHandleQuantityComparisonProperly(ProductRepositoryTest.java:403)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></failure>
+    <system-out><![CDATA[23:21:56.268 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.demo.springboot.repository.ProductRepositoryTest]: ProductRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+23:21:56.324 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.demo.springboot.SpringbootGrpcRestDemoApplication for test class com.demo.springboot.repository.ProductRepositoryTest
+23:21:56.335 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.demo.springboot.repository.ProductRepositoryTest$DataValidationTests]: DataValidationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+23:21:56.342 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.demo.springboot.SpringbootGrpcRestDemoApplication for test class com.demo.springboot.repository.ProductRepositoryTest$DataValidationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+&amp#27;[32m :: Spring Boot :: &amp#27;[39m             &amp#27;[2m (v3.2.12)&amp#27;[0;39m
+
+2025-07-26 23:21:56 [background-preinit] DEBUG o.h.v.i.x.config.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2025-07-26 23:21:56 [background-preinit] DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+2025-07-26 23:21:56 [background-preinit] DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2025-07-26 23:21:56 [background-preinit] DEBUG o.h.v.i.x.config.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+2025-07-26 23:21:56 [background-preinit] DEBUG o.h.v.i.e.r.TraversableResolvers - Found jakarta.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+2025-07-26 23:21:56 [background-preinit] DEBUG o.h.v.i.e.r.TraversableResolvers - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+2025-07-26 23:21:56 [main] INFO  c.d.s.r.ProductRepositoryTest - Starting ProductRepositoryTest using Java 17.0.8 with PID 84057 (started by sekondav in /Users/sekondav/Documents/GitHub/copilot_springboot_demo)
+2025-07-26 23:21:56 [main] DEBUG c.d.s.r.ProductRepositoryTest - Running with Spring Boot v3.2.12, Spring v6.1.15
+2025-07-26 23:21:56 [main] INFO  c.d.s.r.ProductRepositoryTest - No active profile set, falling back to 1 default profile: "default"
+2025-07-26 23:21:56 [background-preinit] DEBUG o.h.v.m.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL
+2025-07-26 23:21:56 [main] DEBUG o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@5f18f9d2
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory'
+2025-07-26 23:21:56 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2025-07-26 23:21:56 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2025-07-26 23:21:56 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.resolver.JPATraversableResolver as ValidatorFactory-scoped traversable resolver.
+2025-07-26 23:21:56 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2025-07-26 23:21:56 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2025-07-26 23:21:56 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2025-07-26 23:21:56 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.AutoConfigurationPackages'
+2025-07-26 23:21:56 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 34 ms. Found 2 JPA repository interfaces.
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.test.context.ImportsContextCustomizer$ImportsCleanupPostProcessor'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'embeddedDataSourceBeanFactoryPostProcessor'
+2025-07-26 23:21:56 [main] INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.test.mock.mockito.MockitoPostProcessor'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'emBeanDefinitionRegistrarPostProcessor'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer$DependsOnDatabaseInitializationPostProcessor'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.test.mock.mockito.MockitoPostProcessor$SpyPostProcessor'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jdbcConnectionDetailsHikariBeanPostProcessor'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.context.internalConfigurationPropertiesBinder'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'entityManagerFactory'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'dataSource'
+2025-07-26 23:21:56 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:9a717a38-152e-4761-93a4-da92974ba90c;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'transactionAttributeSource'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'transactionInterceptor'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'transactionInterceptor' via factory method to bean named 'transactionAttributeSource'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.transaction.config.internalTransactionAdvisor' via factory method to bean named 'transactionAttributeSource'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.transaction.config.internalTransactionAdvisor' via factory method to bean named 'transactionInterceptor'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.jpa-org.springframework.boot.autoconfigure.orm.jpa.JpaProperties'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.context.properties.BoundConfigurationProperties'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.jpa.hibernate-org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration' via constructor to bean named 'dataSource'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration' via constructor to bean named 'spring.jpa-org.springframework.boot.autoconfigure.orm.jpa.JpaProperties'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration' via constructor to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@3a230001'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration' via constructor to bean named 'spring.jpa.hibernate-org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'hikariPoolDataSourceMetadataProvider'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration$HikariPoolDataSourceMetadataProviderConfiguration'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'entityManagerFactoryBuilder'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jpaVendorAdapter'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'entityManagerFactoryBuilder' via factory method to bean named 'jpaVendorAdapter'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'persistenceManagedTypes'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'persistenceManagedTypes' via factory method to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@3a230001'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'persistenceManagedTypes' via factory method to bean named 'org.springframework.context.annotation.AnnotationConfigApplicationContext@5f18f9d2'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'entityManagerFactory' via factory method to bean named 'entityManagerFactoryBuilder'
+2025-07-26 23:21:56 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'entityManagerFactory' via factory method to bean named 'persistenceManagedTypes'
+2025-07-26 23:21:56 [main] DEBUG o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2025-07-26 23:21:56 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-26 23:21:56 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.10.Final
+2025-07-26 23:21:56 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-07-26 23:21:57 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-26 23:21:57 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-26 23:21:57 [main] DEBUG o.h.v.i.x.config.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2025-07-26 23:21:57 [main] DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+2025-07-26 23:21:57 [main] DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2025-07-26 23:21:57 [main] DEBUG o.h.v.i.x.config.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+2025-07-26 23:21:57 [main] DEBUG o.h.v.i.e.r.TraversableResolvers - Found jakarta.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+2025-07-26 23:21:57 [main] DEBUG o.h.v.i.e.r.TraversableResolvers - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+2025-07-26 23:21:57 [main] DEBUG o.h.v.m.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL
+2025-07-26 23:21:57 [main] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2025-07-26 23:21:57 [main] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2025-07-26 23:21:57 [main] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.resolver.JPATraversableResolver as ValidatorFactory-scoped traversable resolver.
+2025-07-26 23:21:57 [main] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2025-07-26 23:21:57 [main] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2025-07-26 23:21:57 [main] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2025-07-26 23:21:57 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-26 23:21:57 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists products cascade 
+Hibernate: 
+    drop table if exists products cascade 
+2025-07-26 23:21:57 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists users cascade 
+2025-07-26 23:21:57 [main] DEBUG org.hibernate.SQL - 
+    create table products (
+        price numeric(38,2) not null,
+        quantity integer not null,
+        id bigint generated by default as identity,
+        name varchar(100) not null,
+        description varchar(500),
+        primary key (id)
+    )
+Hibernate: 
+    create table products (
+        price numeric(38,2) not null,
+        quantity integer not null,
+        id bigint generated by default as identity,
+        name varchar(100) not null,
+        description varchar(500),
+        primary key (id)
+    )
+2025-07-26 23:21:57 [main] DEBUG org.hibernate.SQL - 
+    create table users (
+        account_non_locked boolean not null,
+        failed_login_attempts integer not null,
+        id bigint generated by default as identity,
+        lock_time timestamp(6),
+        phone varchar(15),
+        name varchar(100) not null,
+        email varchar(255) not null unique,
+        password varchar(255) not null,
+        role varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table users (
+        account_non_locked boolean not null,
+        failed_login_attempts integer not null,
+        id bigint generated by default as identity,
+        lock_time timestamp(6),
+        phone varchar(15),
+        name varchar(100) not null,
+        email varchar(255) not null unique,
+        password varchar(255) not null,
+        role varchar(255) not null,
+        primary key (id)
+    )
+2025-07-26 23:21:57 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'springbootGrpcRestDemoApplication'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$PooledDataSourceConfiguration'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jdbcConnectionDetails'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'jdbcConnectionDetails' via factory method to bean named 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.context.properties.EnableConfigurationPropertiesRegistrar.methodValidationExcludeFilter'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$PersistenceManagedTypesConfiguration'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'transactionManager'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jpaSharedEM_entityManagerFactory'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.data.jpa.util.JpaMetamodelCacheCleanup'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.data.jpa.repository.support.JpaEvaluationContextExtension'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jpa.named-queries#0'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jpa.UserRepository.fragments#0'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'userRepository'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jpaMappingContext'
+2025-07-26 23:21:57 [main] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-07-26 23:21:57 [main] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-07-26 23:21:57 [main] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-07-26 23:21:57 [main] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-07-26 23:21:57 [main] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-07-26 23:21:57 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-26 23:21:57 [main] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-07-26 23:21:57 [main] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-07-26 23:21:57 [main] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jpa.named-queries#1'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jpa.ProductRepository.fragments#0'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'productRepository'
+2025-07-26 23:21:57 [main] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-07-26 23:21:57 [main] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-07-26 23:21:57 [main] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-07-26 23:21:57 [main] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-07-26 23:21:57 [main] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-07-26 23:21:57 [main] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-07-26 23:21:57 [main] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'data-jpa.repository-aot-processor#0'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.JdbcTemplateConfiguration'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'dataSourceScriptDatabaseInitializer'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.sql.init.DataSourceInitializationConfiguration'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.sql.init-org.springframework.boot.autoconfigure.sql.init.SqlInitializationProperties'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'dataSourceScriptDatabaseInitializer' via factory method to bean named 'dataSource'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'dataSourceScriptDatabaseInitializer' via factory method to bean named 'spring.sql.init-org.springframework.boot.autoconfigure.sql.init.SqlInitializationProperties'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jdbcTemplate'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.jdbc-org.springframework.boot.autoconfigure.jdbc.JdbcProperties'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'jdbcTemplate' via factory method to bean named 'dataSource'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'jdbcTemplate' via factory method to bean named 'spring.jdbc-org.springframework.boot.autoconfigure.jdbc.JdbcProperties'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.NamedParameterJdbcTemplateConfiguration'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'namedParameterJdbcTemplate'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'namedParameterJdbcTemplate' via factory method to bean named 'jdbcTemplate'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.JdbcClientAutoConfiguration'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jdbcClient'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'jdbcClient' via factory method to bean named 'namedParameterJdbcTemplate'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$EnableTransactionManagementConfiguration$CglibAutoProxyConfiguration'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$EnableTransactionManagementConfiguration'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$TransactionTemplateConfiguration'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'transactionTemplate'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'transactionTemplate' via factory method to bean named 'transactionManager'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'testEntityManager'
+2025-07-26 23:21:57 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'testEntityManager' via factory method to bean named 'entityManagerFactory'
+2025-07-26 23:21:57 [main] DEBUG o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase -2147483647
+2025-07-26 23:21:57 [main] DEBUG o.s.c.s.DefaultLifecycleProcessor - Successfully started bean 'springBootLoggingLifecycle'
+2025-07-26 23:21:57 [main] INFO  c.d.s.r.ProductRepositoryTest - Started ProductRepositoryTest in 1.525 seconds (process running for 2.084)
+2025-07-26 23:21:57 [main] DEBUG o.s.orm.jpa.JpaTransactionManager - Creating new transaction with name [com.demo.springboot.repository.ProductRepositoryTest$DataValidationTests.shouldHandleQuantityComparisonProperly]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-26 23:21:57 [main] DEBUG o.s.orm.jpa.JpaTransactionManager - Opened new EntityManager [SessionImpl(705735067<open>)] for JPA transaction
+2025-07-26 23:21:57 [main] DEBUG o.s.orm.jpa.JpaTransactionManager - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@3fc92211]
+2025-07-26 23:21:58 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        products
+        (description, name, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (description, name, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Latest Apple smartphone]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [iPhone 15]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:NUMERIC) <- [999.99]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:INTEGER) <- [50]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (1:BIGINT) -> [6]
+2025-07-26 23:21:58 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        products
+        (description, name, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (description, name, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Android smartphone with great camera]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Samsung Galaxy S24]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:NUMERIC) <- [899.99]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:INTEGER) <- [30]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (1:BIGINT) -> [7]
+2025-07-26 23:21:58 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        products
+        (description, name, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (description, name, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Professional laptop from Apple]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [MacBook Pro]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:NUMERIC) <- [2499.99]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:INTEGER) <- [15]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (1:BIGINT) -> [8]
+2025-07-26 23:21:58 [main] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.name,
+        p1_0.price,
+        p1_0.quantity 
+    from
+        products p1_0 
+    where
+        p1_0.quantity>?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.name,
+        p1_0.price,
+        p1_0.quantity 
+    from
+        products p1_0 
+    where
+        p1_0.quantity>?
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [40]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (1:BIGINT) -> [5]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (2:VARCHAR) -> [Wireless optical mouse]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (3:VARCHAR) -> [Mouse]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (4:NUMERIC) -> [29.99]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (5:INTEGER) -> [50]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (1:BIGINT) -> [6]
+2025-07-26 23:21:58 [main] DEBUG o.s.orm.jpa.JpaTransactionManager - Initiating transaction rollback
+2025-07-26 23:21:58 [main] DEBUG o.s.orm.jpa.JpaTransactionManager - Rolling back JPA transaction on EntityManager [SessionImpl(705735067<open>)]
+2025-07-26 23:21:58 [main] DEBUG o.s.orm.jpa.JpaTransactionManager - Closing JPA EntityManager [SessionImpl(705735067<open>)] after transaction
+]]></system-out>
+  </testcase>
+  <testcase name="shouldHandlePriceRangeQueriesProperly" classname="com.demo.springboot.repository.ProductRepositoryTest$DataValidationTests" time="0.009">
+    <system-out><![CDATA[2025-07-26 23:21:58 [main] DEBUG o.s.orm.jpa.JpaTransactionManager - Creating new transaction with name [com.demo.springboot.repository.ProductRepositoryTest$DataValidationTests.shouldHandlePriceRangeQueriesProperly]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-26 23:21:58 [main] DEBUG o.s.orm.jpa.JpaTransactionManager - Opened new EntityManager [SessionImpl(1524888886<open>)] for JPA transaction
+2025-07-26 23:21:58 [main] DEBUG o.s.orm.jpa.JpaTransactionManager - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@4eb34397]
+2025-07-26 23:21:58 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        products
+        (description, name, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (description, name, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Latest Apple smartphone]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [iPhone 15]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:NUMERIC) <- [999.99]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:INTEGER) <- [50]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (1:BIGINT) -> [9]
+2025-07-26 23:21:58 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        products
+        (description, name, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (description, name, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Android smartphone with great camera]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Samsung Galaxy S24]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:NUMERIC) <- [899.99]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:INTEGER) <- [30]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (1:BIGINT) -> [10]
+2025-07-26 23:21:58 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        products
+        (description, name, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (description, name, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Professional laptop from Apple]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [MacBook Pro]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:NUMERIC) <- [2499.99]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:INTEGER) <- [15]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (1:BIGINT) -> [11]
+2025-07-26 23:21:58 [main] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.name,
+        p1_0.price,
+        p1_0.quantity 
+    from
+        products p1_0 
+    where
+        p1_0.price between ? and ?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.name,
+        p1_0.price,
+        p1_0.quantity 
+    from
+        products p1_0 
+    where
+        p1_0.price between ? and ?
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:NUMERIC) <- [2000.00]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:NUMERIC) <- [3000.00]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (1:BIGINT) -> [11]
+2025-07-26 23:21:58 [main] DEBUG o.s.orm.jpa.JpaTransactionManager - Initiating transaction rollback
+2025-07-26 23:21:58 [main] DEBUG o.s.orm.jpa.JpaTransactionManager - Rolling back JPA transaction on EntityManager [SessionImpl(1524888886<open>)]
+2025-07-26 23:21:58 [main] DEBUG o.s.orm.jpa.JpaTransactionManager - Closing JPA EntityManager [SessionImpl(1524888886<open>)] after transaction
+]]></system-out>
+  </testcase>
+  <testcase name="shouldHandleCaseInsensitiveNameSearch" classname="com.demo.springboot.repository.ProductRepositoryTest$DataValidationTests" time="0.007">
+    <system-out><![CDATA[2025-07-26 23:21:58 [main] DEBUG o.s.orm.jpa.JpaTransactionManager - Creating new transaction with name [com.demo.springboot.repository.ProductRepositoryTest$DataValidationTests.shouldHandleCaseInsensitiveNameSearch]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-26 23:21:58 [main] DEBUG o.s.orm.jpa.JpaTransactionManager - Opened new EntityManager [SessionImpl(1318241986<open>)] for JPA transaction
+2025-07-26 23:21:58 [main] DEBUG o.s.orm.jpa.JpaTransactionManager - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@24663d05]
+2025-07-26 23:21:58 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        products
+        (description, name, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (description, name, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Latest Apple smartphone]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [iPhone 15]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:NUMERIC) <- [999.99]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:INTEGER) <- [50]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (1:BIGINT) -> [12]
+2025-07-26 23:21:58 [main] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.name,
+        p1_0.price,
+        p1_0.quantity 
+    from
+        products p1_0 
+    where
+        upper(p1_0.name) like upper(?) escape '\'
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.name,
+        p1_0.price,
+        p1_0.quantity 
+    from
+        products p1_0 
+    where
+        upper(p1_0.name) like upper(?) escape '\'
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [%iphone%]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (1:BIGINT) -> [12]
+2025-07-26 23:21:58 [main] DEBUG o.s.orm.jpa.JpaTransactionManager - Initiating transaction rollback
+2025-07-26 23:21:58 [main] DEBUG o.s.orm.jpa.JpaTransactionManager - Rolling back JPA transaction on EntityManager [SessionImpl(1318241986<open>)]
+2025-07-26 23:21:58 [main] DEBUG o.s.orm.jpa.JpaTransactionManager - Closing JPA EntityManager [SessionImpl(1318241986<open>)] after transaction
+]]></system-out>
+  </testcase>
+  <testcase name="shouldHandleEmptyNameSearchGracefully" classname="com.demo.springboot.repository.ProductRepositoryTest$DataValidationTests" time="0.006">
+    <failure message="&#10;Expected size: 1 but was: 6 in:&#10;[Product{id=1, name=&apos;Laptop&apos;, description=&apos;High-performance laptop&apos;, price=999.99, quantity=10},&#10;    Product{id=2, name=&apos;Smartphone&apos;, description=&apos;Latest smartphone model&apos;, price=699.99, quantity=15},&#10;    Product{id=3, name=&apos;Tablet&apos;, description=&apos;10-inch tablet&apos;, price=299.99, quantity=20},&#10;    Product{id=4, name=&apos;Headphones&apos;, description=&apos;Wireless noise-canceling headphones&apos;, price=199.99, quantity=25},&#10;    Product{id=5, name=&apos;Mouse&apos;, description=&apos;Wireless optical mouse&apos;, price=29.99, quantity=50},&#10;    Product{id=13, name=&apos;iPhone 15&apos;, description=&apos;Latest Apple smartphone&apos;, price=999.99, quantity=50}]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+
+Expected size: 1 but was: 6 in:
+[Product{id=1, name='Laptop', description='High-performance laptop', price=999.99, quantity=10},
+    Product{id=2, name='Smartphone', description='Latest smartphone model', price=699.99, quantity=15},
+    Product{id=3, name='Tablet', description='10-inch tablet', price=299.99, quantity=20},
+    Product{id=4, name='Headphones', description='Wireless noise-canceling headphones', price=199.99, quantity=25},
+    Product{id=5, name='Mouse', description='Wireless optical mouse', price=29.99, quantity=50},
+    Product{id=13, name='iPhone 15', description='Latest Apple smartphone', price=999.99, quantity=50}]
+	at com.demo.springboot.repository.ProductRepositoryTest$DataValidationTests.shouldHandleEmptyNameSearchGracefully(ProductRepositoryTest.java:355)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></failure>
+    <system-out><![CDATA[2025-07-26 23:21:58 [main] DEBUG o.s.orm.jpa.JpaTransactionManager - Creating new transaction with name [com.demo.springboot.repository.ProductRepositoryTest$DataValidationTests.shouldHandleEmptyNameSearchGracefully]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-26 23:21:58 [main] DEBUG o.s.orm.jpa.JpaTransactionManager - Opened new EntityManager [SessionImpl(1810425582<open>)] for JPA transaction
+2025-07-26 23:21:58 [main] DEBUG o.s.orm.jpa.JpaTransactionManager - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@511e0453]
+2025-07-26 23:21:58 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        products
+        (description, name, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (description, name, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Latest Apple smartphone]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [iPhone 15]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:NUMERIC) <- [999.99]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:INTEGER) <- [50]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (1:BIGINT) -> [13]
+2025-07-26 23:21:58 [main] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.name,
+        p1_0.price,
+        p1_0.quantity 
+    from
+        products p1_0 
+    where
+        upper(p1_0.name) like upper(?) escape '\'
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.name,
+        p1_0.price,
+        p1_0.quantity 
+    from
+        products p1_0 
+    where
+        upper(p1_0.name) like upper(?) escape '\'
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [%%]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (1:BIGINT) -> [1]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (2:VARCHAR) -> [High-performance laptop]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (3:VARCHAR) -> [Laptop]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (4:NUMERIC) -> [999.99]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (5:INTEGER) -> [10]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (1:BIGINT) -> [2]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (2:VARCHAR) -> [Latest smartphone model]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (3:VARCHAR) -> [Smartphone]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (4:NUMERIC) -> [699.99]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (5:INTEGER) -> [15]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (1:BIGINT) -> [3]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (2:VARCHAR) -> [10-inch tablet]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (3:VARCHAR) -> [Tablet]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (4:NUMERIC) -> [299.99]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (5:INTEGER) -> [20]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (1:BIGINT) -> [4]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (2:VARCHAR) -> [Wireless noise-canceling headphones]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (3:VARCHAR) -> [Headphones]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (4:NUMERIC) -> [199.99]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (5:INTEGER) -> [25]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (1:BIGINT) -> [5]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (2:VARCHAR) -> [Wireless optical mouse]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (3:VARCHAR) -> [Mouse]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (4:NUMERIC) -> [29.99]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (5:INTEGER) -> [50]
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.extract - extracted value (1:BIGINT) -> [13]
+2025-07-26 23:21:58 [main] DEBUG o.s.orm.jpa.JpaTransactionManager - Initiating transaction rollback
+2025-07-26 23:21:58 [main] DEBUG o.s.orm.jpa.JpaTransactionManager - Rolling back JPA transaction on EntityManager [SessionImpl(1810425582<open>)]
+2025-07-26 23:21:58 [main] DEBUG o.s.orm.jpa.JpaTransactionManager - Closing JPA EntityManager [SessionImpl(1810425582<open>)] after transaction
+]]></system-out>
+  </testcase>
+  <testcase name="shouldHandleNullNameSearchGracefully" classname="com.demo.springboot.repository.ProductRepositoryTest$DataValidationTests" time="0.003">
+    <system-out><![CDATA[2025-07-26 23:21:58 [main] DEBUG o.s.orm.jpa.JpaTransactionManager - Creating new transaction with name [com.demo.springboot.repository.ProductRepositoryTest$DataValidationTests.shouldHandleNullNameSearchGracefully]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-26 23:21:58 [main] DEBUG o.s.orm.jpa.JpaTransactionManager - Opened new EntityManager [SessionImpl(1184384292<open>)] for JPA transaction
+2025-07-26 23:21:58 [main] DEBUG o.s.orm.jpa.JpaTransactionManager - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@745e1fb7]
+2025-07-26 23:21:58 [main] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.name,
+        p1_0.price,
+        p1_0.quantity 
+    from
+        products p1_0 
+    where
+        upper(p1_0.name) like upper(?) escape '\'
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.name,
+        p1_0.price,
+        p1_0.quantity 
+    from
+        products p1_0 
+    where
+        upper(p1_0.name) like upper(?) escape '\'
+2025-07-26 23:21:58 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [null]
+2025-07-26 23:21:58 [main] DEBUG o.s.orm.jpa.JpaTransactionManager - Initiating transaction rollback
+2025-07-26 23:21:58 [main] DEBUG o.s.orm.jpa.JpaTransactionManager - Rolling back JPA transaction on EntityManager [SessionImpl(1184384292<open>)]
+2025-07-26 23:21:58 [main] DEBUG o.s.orm.jpa.JpaTransactionManager - Closing JPA EntityManager [SessionImpl(1184384292<open>)] after transaction
+]]></system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,88 @@
+-------------------------------------------------------------------------------
+Test set: com.demo.springboot.config.HttpBodyLoggingFilterTest$ContentTypeTests
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.015 s <<< FAILURE! -- in com.demo.springboot.config.HttpBodyLoggingFilterTest$ContentTypeTests
+com.demo.springboot.config.HttpBodyLoggingFilterTest$ContentTypeTests.shouldHandleFormDataContentType -- Time elapsed: 0.004 s <<< FAILURE!
+Argument(s) are different! Wanted:
+filterChain.doFilter(
+    org.springframework.mock.web.MockHttpServletRequest@1f6865ca,
+    org.springframework.mock.web.MockHttpServletResponse@7416b560
+);
+-> at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:122)
+Actual invocations have different arguments at positions [0, 1]:
+filterChain.doFilter(
+    org.springframework.web.util.ContentCachingRequestWrapper@6044311a,
+    org.springframework.web.util.ContentCachingResponseWrapper@53d782b0
+);
+-> at com.demo.springboot.config.HttpBodyLoggingFilter.doFilterInternal(HttpBodyLoggingFilter.java:43)
+
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:122)
+	at com.demo.springboot.config.HttpBodyLoggingFilterTest$ContentTypeTests.shouldHandleFormDataContentType(HttpBodyLoggingFilterTest.java:262)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.demo.springboot.config.HttpBodyLoggingFilterTest$ContentTypeTests.shouldHandleXmlContentType -- Time elapsed: 0.002 s <<< FAILURE!
+Argument(s) are different! Wanted:
+filterChain.doFilter(
+    org.springframework.mock.web.MockHttpServletRequest@21304869,
+    org.springframework.mock.web.MockHttpServletResponse@63dd81ee
+);
+-> at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:122)
+Actual invocations have different arguments at positions [0, 1]:
+filterChain.doFilter(
+    org.springframework.web.util.ContentCachingRequestWrapper@49f2994f,
+    org.springframework.web.util.ContentCachingResponseWrapper@9353d68
+);
+-> at com.demo.springboot.config.HttpBodyLoggingFilter.doFilterInternal(HttpBodyLoggingFilter.java:43)
+
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:122)
+	at com.demo.springboot.config.HttpBodyLoggingFilterTest$ContentTypeTests.shouldHandleXmlContentType(HttpBodyLoggingFilterTest.java:248)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.demo.springboot.config.HttpBodyLoggingFilterTest$ContentTypeTests.shouldHandleJsonContentType -- Time elapsed: 0.002 s <<< FAILURE!
+Argument(s) are different! Wanted:
+filterChain.doFilter(
+    org.springframework.mock.web.MockHttpServletRequest@3e6b8b27,
+    org.springframework.mock.web.MockHttpServletResponse@5d965dbd
+);
+-> at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:122)
+Actual invocations have different arguments at positions [0, 1]:
+filterChain.doFilter(
+    org.springframework.web.util.ContentCachingRequestWrapper@7e199cec,
+    org.springframework.web.util.ContentCachingResponseWrapper@649df002
+);
+-> at com.demo.springboot.config.HttpBodyLoggingFilter.doFilterInternal(HttpBodyLoggingFilter.java:43)
+
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:122)
+	at com.demo.springboot.config.HttpBodyLoggingFilterTest$ContentTypeTests.shouldHandleJsonContentType(HttpBodyLoggingFilterTest.java:234)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.demo.springboot.config.HttpBodyLoggingFilterTest$ContentTypeTests.shouldHandleNullContentType -- Time elapsed: 0.002 s <<< FAILURE!
+Argument(s) are different! Wanted:
+filterChain.doFilter(
+    org.springframework.mock.web.MockHttpServletRequest@7452e4ec,
+    org.springframework.mock.web.MockHttpServletResponse@5ae68d0e
+);
+-> at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:122)
+Actual invocations have different arguments at positions [0, 1]:
+filterChain.doFilter(
+    org.springframework.web.util.ContentCachingRequestWrapper@3e1596c3,
+    org.springframework.web.util.ContentCachingResponseWrapper@252d690
+);
+-> at com.demo.springboot.config.HttpBodyLoggingFilter.doFilterInternal(HttpBodyLoggingFilter.java:43)
+
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:122)
+	at com.demo.springboot.config.HttpBodyLoggingFilterTest$ContentTypeTests.shouldHandleNullContentType(HttpBodyLoggingFilterTest.java:276)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+

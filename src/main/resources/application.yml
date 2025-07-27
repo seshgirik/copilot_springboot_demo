@@ -28,6 +28,7 @@ spring:
     properties:
       hibernate:
         format_sql: true
+        dialect: org.hibernate.dialect.H2Dialect
     defer-datasource-initialization: true
         
   # SQL initialization
@@ -58,8 +59,23 @@ springdoc:
     
 # JWT Configuration
 jwt:
-  secret: your-secret-key-here-make-it-long-and-secure-in-production
+  secret: ${JWT_SECRET:your-super-secret-jwt-key-must-be-at-least-32-characters-long-for-production}
   expiration: 86400000 # 24 hours in milliseconds
+
+# Security Configuration
+security:
+  cors:
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:https://yourdomain.com}
+  rate-limit:
+    requests-per-minute: 10
+  account-lockout:
+    max-attempts: 5
+    lock-duration-minutes: 15
+  password:
+    min-length: 8
+  ssrf:
+    allowed-hosts: ${SSRF_ALLOWED_HOSTS:localhost,127.0.0.1,::1}
+    allowed-schemes: ${SSRF_ALLOWED_SCHEMES:http,https}
 
 # Logging Configuration
 logging:

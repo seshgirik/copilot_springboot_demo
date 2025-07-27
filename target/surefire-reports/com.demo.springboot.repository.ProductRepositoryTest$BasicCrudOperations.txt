@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: com.demo.springboot.repository.ProductRepositoryTest$BasicCrudOperations
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.046 s <<< FAILURE! -- in com.demo.springboot.repository.ProductRepositoryTest$BasicCrudOperations
+com.demo.springboot.repository.ProductRepositoryTest$BasicCrudOperations.shouldFindAllProductsSuccessfully -- Time elapsed: 0.006 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected size: 3 but was: 8 in:
+[Product{id=1, name='Laptop', description='High-performance laptop', price=999.99, quantity=10},
+    Product{id=2, name='Smartphone', description='Latest smartphone model', price=699.99, quantity=15},
+    Product{id=3, name='Tablet', description='10-inch tablet', price=299.99, quantity=20},
+    Product{id=4, name='Headphones', description='Wireless noise-canceling headphones', price=199.99, quantity=25},
+    Product{id=5, name='Mouse', description='Wireless optical mouse', price=29.99, quantity=50},
+    Product{id=39, name='iPhone 15', description='Latest Apple smartphone', price=999.99, quantity=50},
+    Product{id=40, name='Samsung Galaxy S24', description='Android smartphone with great camera', price=899.99, quantity=30},
+    Product{id=41, name='MacBook Pro', description='Professional laptop from Apple', price=2499.99, quantity=15}]
+	at com.demo.springboot.repository.ProductRepositoryTest$BasicCrudOperations.shouldFindAllProductsSuccessfully(ProductRepositoryTest.java:120)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+

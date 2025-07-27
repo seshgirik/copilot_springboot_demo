@@ -1,0 +1,45 @@
+-------------------------------------------------------------------------------
+Test set: com.demo.springboot.repository.ProductRepositoryTest$PaginationTests
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.032 s <<< FAILURE! -- in com.demo.springboot.repository.ProductRepositoryTest$PaginationTests
+com.demo.springboot.repository.ProductRepositoryTest$PaginationTests.shouldReturnEmptyPageWhenNoProductsExist -- Time elapsed: 0.011 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting empty but was: [Product{id=1, name='Laptop', description='High-performance laptop', price=999.99, quantity=10},
+    Product{id=2, name='Smartphone', description='Latest smartphone model', price=699.99, quantity=15},
+    Product{id=3, name='Tablet', description='10-inch tablet', price=299.99, quantity=20},
+    Product{id=4, name='Headphones', description='Wireless noise-canceling headphones', price=199.99, quantity=25},
+    Product{id=5, name='Mouse', description='Wireless optical mouse', price=29.99, quantity=50}]
+	at com.demo.springboot.repository.ProductRepositoryTest$PaginationTests.shouldReturnEmptyPageWhenNoProductsExist(ProductRepositoryTest.java:223)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.demo.springboot.repository.ProductRepositoryTest$PaginationTests.shouldFindProductsWithPagination -- Time elapsed: 0.008 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+
+expected: 3L
+ but was: 8L
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at com.demo.springboot.repository.ProductRepositoryTest$PaginationTests.shouldFindProductsWithPagination(ProductRepositoryTest.java:185)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.demo.springboot.repository.ProductRepositoryTest$PaginationTests.shouldFindSecondPageOfProducts -- Time elapsed: 0.006 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected size: 1 but was: 2 in:
+[Product{id=3, name='Tablet', description='10-inch tablet', price=299.99, quantity=20},
+    Product{id=4, name='Headphones', description='Wireless noise-canceling headphones', price=199.99, quantity=25}]
+	at com.demo.springboot.repository.ProductRepositoryTest$PaginationTests.shouldFindSecondPageOfProducts(ProductRepositoryTest.java:206)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+

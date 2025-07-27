@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------
+Test set: com.demo.springboot.repository.ProductRepositoryTest$DataValidationTests
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 2.014 s <<< FAILURE! -- in com.demo.springboot.repository.ProductRepositoryTest$DataValidationTests
+com.demo.springboot.repository.ProductRepositoryTest$DataValidationTests.shouldHandleQuantityComparisonProperly -- Time elapsed: 0.423 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected size: 1 but was: 2 in:
+[Product{id=5, name='Mouse', description='Wireless optical mouse', price=29.99, quantity=50},
+    Product{id=6, name='iPhone 15', description='Latest Apple smartphone', price=999.99, quantity=50}]
+	at com.demo.springboot.repository.ProductRepositoryTest$DataValidationTests.shouldHandleQuantityComparisonProperly(ProductRepositoryTest.java:403)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.demo.springboot.repository.ProductRepositoryTest$DataValidationTests.shouldHandleEmptyNameSearchGracefully -- Time elapsed: 0.006 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected size: 1 but was: 6 in:
+[Product{id=1, name='Laptop', description='High-performance laptop', price=999.99, quantity=10},
+    Product{id=2, name='Smartphone', description='Latest smartphone model', price=699.99, quantity=15},
+    Product{id=3, name='Tablet', description='10-inch tablet', price=299.99, quantity=20},
+    Product{id=4, name='Headphones', description='Wireless noise-canceling headphones', price=199.99, quantity=25},
+    Product{id=5, name='Mouse', description='Wireless optical mouse', price=29.99, quantity=50},
+    Product{id=13, name='iPhone 15', description='Latest Apple smartphone', price=999.99, quantity=50}]
+	at com.demo.springboot.repository.ProductRepositoryTest$DataValidationTests.shouldHandleEmptyNameSearchGracefully(ProductRepositoryTest.java:355)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+

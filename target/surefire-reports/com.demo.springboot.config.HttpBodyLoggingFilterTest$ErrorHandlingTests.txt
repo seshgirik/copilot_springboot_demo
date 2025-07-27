@@ -1,0 +1,35 @@
+-------------------------------------------------------------------------------
+Test set: com.demo.springboot.config.HttpBodyLoggingFilterTest$ErrorHandlingTests
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.010 s <<< FAILURE! -- in com.demo.springboot.config.HttpBodyLoggingFilterTest$ErrorHandlingTests
+com.demo.springboot.config.HttpBodyLoggingFilterTest$ErrorHandlingTests.shouldHandleFilterChainExceptions -- Time elapsed: 0.005 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected jakarta.servlet.ServletException to be thrown, but nothing was thrown.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+	at com.demo.springboot.config.HttpBodyLoggingFilterTest$ErrorHandlingTests.shouldHandleFilterChainExceptions(HttpBodyLoggingFilterTest.java:296)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.demo.springboot.config.HttpBodyLoggingFilterTest$ErrorHandlingTests.shouldHandleNullRequestUri -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.NullPointerException: Cannot invoke "String.contains(java.lang.CharSequence)" because "uri" is null
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3168)
+	at com.demo.springboot.config.HttpBodyLoggingFilterTest$ErrorHandlingTests.shouldHandleNullRequestUri(HttpBodyLoggingFilterTest.java:310)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: java.lang.NullPointerException: Cannot invoke "String.contains(java.lang.CharSequence)" because "uri" is null
+	at com.demo.springboot.config.HttpBodyLoggingFilter.shouldSkipLogging(HttpBodyLoggingFilter.java:85)
+	at com.demo.springboot.config.HttpBodyLoggingFilter.doFilterInternal(HttpBodyLoggingFilter.java:32)
+	at com.demo.springboot.config.HttpBodyLoggingFilterTest$ErrorHandlingTests.lambda$shouldHandleNullRequestUri$1(HttpBodyLoggingFilterTest.java:311)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	... 7 more
+

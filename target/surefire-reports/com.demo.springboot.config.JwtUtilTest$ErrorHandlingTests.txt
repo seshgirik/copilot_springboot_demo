@@ -1,0 +1,39 @@
+-------------------------------------------------------------------------------
+Test set: com.demo.springboot.config.JwtUtilTest$ErrorHandlingTests
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.128 s <<< FAILURE! -- in com.demo.springboot.config.JwtUtilTest$ErrorHandlingTests
+com.demo.springboot.config.JwtUtilTest$ErrorHandlingTests.shouldHandleTokenWithInvalidSignature -- Time elapsed: 0.123 s <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.demo.springboot.config.JwtUtilTest.setUp(JwtUtilTest.java:45)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+	at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:192)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.demo.springboot.config.JwtUtilTest$ErrorHandlingTests.shouldHandleTokenParsingErrorsGracefully -- Time elapsed: 0.002 s <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.demo.springboot.config.JwtUtilTest.setUp(JwtUtilTest.java:45)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+	at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:192)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.demo.springboot.config.JwtUtilTest$ErrorHandlingTests.shouldHandleNullUserDetails -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.springframework.security.core.userdetails.UserDetails.getUsername()" because "userDetails" is null
+	at com.demo.springboot.config.JwtUtil.validateToken(JwtUtil.java:114)
+	at com.demo.springboot.config.JwtUtilTest$ErrorHandlingTests.shouldHandleNullUserDetails(JwtUtilTest.java:465)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
