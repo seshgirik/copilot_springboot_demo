@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
@@ -28,6 +29,12 @@ public class SecurityConfig {
 
     @Value("${security.cors.allowed-origins:https://yourdomain.com}")
     private String allowedOrigins;
+    @Value("${security.cors.allowed-methods:GET,POST}")
+    private String allowedMethods;
+    @Value("${security.cors.allowed-headers:Authorization,Content-Type}")
+    private String allowedHeaders;
+    @Value("${security.cors.allow-credentials:false}")
+    private boolean allowCredentials;
 
     @Autowired
     private JwtAuthenticationFilter jwtAuthFilter;
@@ -56,6 +63,8 @@ public class SecurityConfig {
                 .contentTypeOptions(withDefaults -> {})
             )
             .authorizeHttpRequests(auth -> auth
+                // Allow CORS preflight requests
+                .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                 // In production, restrict or disable these endpoints
                 .requestMatchers("/auth/**", "/debug/**", "/api/test/rate-limit").permitAll()
                 .requestMatchers("/h2-console/**", "/swagger-ui/**", "/api-docs/**", "/v3/api-docs/**").hasRole("ADMIN") // Restrict to ADMIN
@@ -72,11 +81,18 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        // Restrict to trusted origins in production
-        configuration.setAllowedOriginPatterns(Arrays.asList(allowedOrigins.split(",")));
-        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-        configuration.setAllowedHeaders(Arrays.asList("*"));
-        configuration.setAllowCredentials(true);
+        
+        // Debug logging
+        System.out.println("�� CORS Configuration Debug:");
+        System.out.println("   📍 Allowed Origins: " + allowedOrigins);
+        System.out.println("   📍 Allowed Methods: " + allowedMethods);
+        System.out.println("   📍 Allowed Headers: " + allowedHeaders);
+        System.out.println("   📍 Allow Credentials: " + allowCredentials);
+        
+        configuration.setAllowedOrigins(Arrays.asList(allowedOrigins.split(",")));
+        configuration.setAllowedMethods(Arrays.asList(allowedMethods.split(",")));
+        configuration.setAllowedHeaders(Arrays.asList(allowedHeaders.split(",")));
+        configuration.setAllowCredentials(allowCredentials);
         
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
