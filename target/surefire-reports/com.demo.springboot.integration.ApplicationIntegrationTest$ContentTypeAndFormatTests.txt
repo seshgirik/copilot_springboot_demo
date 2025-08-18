@@ -1,37 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.demo.springboot.integration.ApplicationIntegrationTest$ContentTypeAndFormatTests
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 0.964 s <<< FAILURE! -- in com.demo.springboot.integration.ApplicationIntegrationTest$ContentTypeAndFormatTests
-com.demo.springboot.config.CustomAuthenticationProviderTest$SuccessfulAuthenticationTests.shouldAuthenticateValidCredentials -- Time elapsed: 0.002 s <<< FAILURE!
-Wanted but not invoked:
-userRepository.save(
-    User{id=1, name='Test User', email='test@example.com', phone='null', role='USER'}
-);
--> at com.demo.springboot.config.CustomAuthenticationProviderTest$SuccessfulAuthenticationTests.shouldAuthenticateValidCredentials(CustomAuthenticationProviderTest.java:85)
-
-However, there was exactly 1 interaction with this mock:
-userRepository.findByEmail(
-    "test@example.com"
-);
--> at com.demo.springboot.config.CustomAuthenticationProvider.authenticate(CustomAuthenticationProvider.java:56)
-
-
-	at com.demo.springboot.config.CustomAuthenticationProviderTest$SuccessfulAuthenticationTests.shouldAuthenticateValidCredentials(CustomAuthenticationProviderTest.java:85)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-
-com.demo.springboot.config.CustomAuthenticationProviderTest$SuccessfulAuthenticationTests.shouldResetFailedAttemptsOnSuccessfulLogin -- Time elapsed: 0.001 s <<< ERROR!
-org.springframework.security.authentication.BadCredentialsException: Authentication failed: Account is locked. Try again later.
-	at com.demo.springboot.config.CustomAuthenticationProvider.authenticate(CustomAuthenticationProvider.java:137)
-	at com.demo.springboot.config.CustomAuthenticationProviderTest$SuccessfulAuthenticationTests.shouldResetFailedAttemptsOnSuccessfulLogin(CustomAuthenticationProviderTest.java:105)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-
-com.demo.springboot.integration.ApplicationIntegrationTest$ContentTypeAndFormatTests.shouldAcceptAndReturnJsonContentType -- Time elapsed: 0.021 s <<< ERROR!
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.645 s <<< FAILURE! -- in com.demo.springboot.integration.ApplicationIntegrationTest$ContentTypeAndFormatTests
+com.demo.springboot.integration.ApplicationIntegrationTest$ContentTypeAndFormatTests.shouldAcceptAndReturnJsonContentType -- Time elapsed: 0.065 s <<< ERROR!
 jakarta.servlet.ServletException: Request processing failed: org.springframework.http.converter.HttpMessageConversionException: Type definition error: [simple type, class org.springframework.security.core.GrantedAuthority]
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1022)
 	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)

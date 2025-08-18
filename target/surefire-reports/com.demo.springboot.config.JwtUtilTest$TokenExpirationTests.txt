@@ -1,22 +1,9 @@
 -------------------------------------------------------------------------------
 Test set: com.demo.springboot.config.JwtUtilTest$TokenExpirationTests
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.005 s <<< FAILURE! -- in com.demo.springboot.config.JwtUtilTest$TokenExpirationTests
-com.demo.springboot.config.JwtUtilTest$TokenExpirationTests.shouldCheckIfTokenIsExpired -- Time elapsed: 0.002 s <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.demo.springboot.config.JwtUtilTest.setUp(JwtUtilTest.java:45)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-	at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:192)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.005 s <<< FAILURE! -- in com.demo.springboot.config.JwtUtilTest$TokenExpirationTests
 com.demo.springboot.config.JwtUtilTest$TokenExpirationTests.shouldDetectExpiredToken -- Time elapsed: 0.002 s <<< ERROR!
-io.jsonwebtoken.ExpiredJwtException: JWT expired 1902 milliseconds ago at 2025-07-26T17:51:57.000Z. Current time: 2025-07-26T17:51:58.902Z. Allowed clock skew: 0 milliseconds.
+io.jsonwebtoken.ExpiredJwtException: JWT expired 1353 milliseconds ago at 2025-07-28T10:53:29.000Z. Current time: 2025-07-28T10:53:30.353Z. Allowed clock skew: 0 milliseconds.
 	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:682)
 	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:362)
 	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:94)
@@ -34,8 +21,8 @@ io.jsonwebtoken.ExpiredJwtException: JWT expired 1902 milliseconds ago at 2025-0
 	at org.springframework.util.MethodInvoker.invoke(MethodInvoker.java:285)
 	at org.springframework.test.util.ReflectionTestUtils.invokeMethod(ReflectionTestUtils.java:499)
 	at org.springframework.test.util.ReflectionTestUtils.invokeMethod(ReflectionTestUtils.java:427)
-	at com.demo.springboot.config.JwtUtilTest$TokenExpirationTests.invokeIsTokenExpired(JwtUtilTest.java:349)
-	at com.demo.springboot.config.JwtUtilTest$TokenExpirationTests.shouldDetectExpiredToken(JwtUtilTest.java:342)
+	at com.demo.springboot.config.JwtUtilTest$TokenExpirationTests.invokeIsTokenExpired(JwtUtilTest.java:353)
+	at com.demo.springboot.config.JwtUtilTest$TokenExpirationTests.shouldDetectExpiredToken(JwtUtilTest.java:346)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)

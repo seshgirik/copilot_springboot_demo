@@ -1,57 +1,29 @@
 -------------------------------------------------------------------------------
 Test set: com.demo.springboot.config.SsrfProtectionFilterTest$RequestFilteringTests
 -------------------------------------------------------------------------------
-Tests run: 9, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 0.009 s <<< FAILURE! -- in com.demo.springboot.config.SsrfProtectionFilterTest$RequestFilteringTests
-com.demo.springboot.config.SsrfProtectionFilterTest$RequestFilteringTests.shouldBlockRequestsWithMaliciousUrlParameters -- Time elapsed: 0.001 s <<< ERROR!
-java.lang.NullPointerException: Cannot invoke "String.split(String)" because "this.allowedSchemes" is null
-	at com.demo.springboot.config.SsrfProtectionFilter.isAllowedScheme(SsrfProtectionFilter.java:152)
-	at com.demo.springboot.config.SsrfProtectionFilter.isValidUrl(SsrfProtectionFilter.java:132)
-	at com.demo.springboot.config.SsrfProtectionFilter.doFilterInternal(SsrfProtectionFilter.java:77)
-	at com.demo.springboot.config.SsrfProtectionFilterTest$RequestFilteringTests.shouldBlockRequestsWithMaliciousUrlParameters(SsrfProtectionFilterTest.java:155)
+Tests run: 9, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.011 s <<< FAILURE! -- in com.demo.springboot.config.SsrfProtectionFilterTest$RequestFilteringTests
+com.demo.springboot.config.SsrfProtectionFilterTest$RequestFilteringTests.shouldDetectVariousUrlParameterNames -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Should block parameter: url ==> expected: <400> but was: <200>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:563)
+	at com.demo.springboot.config.SsrfProtectionFilterTest$RequestFilteringTests.shouldDetectVariousUrlParameterNames(SsrfProtectionFilterTest.java:226)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-com.demo.springboot.config.SsrfProtectionFilterTest$RequestFilteringTests.shouldHandleUrlEncodedParameters -- Time elapsed: 0 s <<< ERROR!
-java.lang.NullPointerException: Cannot invoke "String.split(String)" because "this.allowedSchemes" is null
-	at com.demo.springboot.config.SsrfProtectionFilter.isAllowedScheme(SsrfProtectionFilter.java:152)
-	at com.demo.springboot.config.SsrfProtectionFilter.isValidUrl(SsrfProtectionFilter.java:132)
-	at com.demo.springboot.config.SsrfProtectionFilter.doFilterInternal(SsrfProtectionFilter.java:77)
-	at com.demo.springboot.config.SsrfProtectionFilterTest$RequestFilteringTests.shouldHandleUrlEncodedParameters(SsrfProtectionFilterTest.java:202)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-
-com.demo.springboot.config.SsrfProtectionFilterTest$RequestFilteringTests.shouldDetectVariousUrlParameterNames -- Time elapsed: 0.001 s <<< ERROR!
-java.lang.NullPointerException: Cannot invoke "String.split(String)" because "this.allowedSchemes" is null
-	at com.demo.springboot.config.SsrfProtectionFilter.isAllowedScheme(SsrfProtectionFilter.java:152)
-	at com.demo.springboot.config.SsrfProtectionFilter.isValidUrl(SsrfProtectionFilter.java:132)
-	at com.demo.springboot.config.SsrfProtectionFilter.doFilterInternal(SsrfProtectionFilter.java:77)
-	at com.demo.springboot.config.SsrfProtectionFilterTest$RequestFilteringTests.shouldDetectVariousUrlParameterNames(SsrfProtectionFilterTest.java:221)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-
-com.demo.springboot.config.SsrfProtectionFilterTest$RequestFilteringTests.shouldAllowRequestsWithSafeUrlParameters -- Time elapsed: 0.001 s <<< ERROR!
-java.lang.NullPointerException: Cannot invoke "String.split(String)" because "this.allowedSchemes" is null
-	at com.demo.springboot.config.SsrfProtectionFilter.isAllowedScheme(SsrfProtectionFilter.java:152)
-	at com.demo.springboot.config.SsrfProtectionFilter.isValidUrl(SsrfProtectionFilter.java:132)
-	at com.demo.springboot.config.SsrfProtectionFilter.doFilterInternal(SsrfProtectionFilter.java:77)
-	at com.demo.springboot.config.SsrfProtectionFilterTest$RequestFilteringTests.shouldAllowRequestsWithSafeUrlParameters(SsrfProtectionFilterTest.java:171)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-
-com.demo.springboot.config.SsrfProtectionFilterTest$RequestFilteringTests.shouldHandleMultipleUrlParameters -- Time elapsed: 0.001 s <<< ERROR!
-java.lang.NullPointerException: Cannot invoke "String.split(String)" because "this.allowedSchemes" is null
-	at com.demo.springboot.config.SsrfProtectionFilter.isAllowedScheme(SsrfProtectionFilter.java:152)
-	at com.demo.springboot.config.SsrfProtectionFilter.isValidUrl(SsrfProtectionFilter.java:132)
-	at com.demo.springboot.config.SsrfProtectionFilter.doFilterInternal(SsrfProtectionFilter.java:77)
-	at com.demo.springboot.config.SsrfProtectionFilterTest$RequestFilteringTests.shouldHandleMultipleUrlParameters(SsrfProtectionFilterTest.java:186)
+com.demo.springboot.config.SsrfProtectionFilterTest$RequestFilteringTests.shouldAllowRequestsWithSafeUrlParameters -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <200> but was: <400>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at com.demo.springboot.config.SsrfProtectionFilterTest$RequestFilteringTests.shouldAllowRequestsWithSafeUrlParameters(SsrfProtectionFilterTest.java:176)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)

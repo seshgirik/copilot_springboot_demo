@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.demo.springboot.repository.UserRepositoryTest$DataValidationTests
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.034 s <<< FAILURE! -- in com.demo.springboot.repository.UserRepositoryTest$DataValidationTests
-com.demo.springboot.repository.UserRepositoryTest$DataValidationTests.shouldHandleCaseInsensitiveNameSearch -- Time elapsed: 0.018 s <<< ERROR!
+Tests run: 3, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.027 s <<< FAILURE! -- in com.demo.springboot.repository.UserRepositoryTest$DataValidationTests
+com.demo.springboot.repository.UserRepositoryTest$DataValidationTests.shouldHandleCaseInsensitiveNameSearch -- Time elapsed: 0.013 s <<< ERROR!
 jakarta.validation.ConstraintViolationException: 
 Validation failed for classes [com.demo.springboot.entity.User] during persist time for groups [jakarta.validation.groups.Default, ]
 List of constraint violations:[

@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.demo.springboot.repository.UserRepositoryTest$BasicCrudOperations
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 0.017 s <<< FAILURE! -- in com.demo.springboot.repository.UserRepositoryTest$BasicCrudOperations
-com.demo.springboot.repository.UserRepositoryTest$BasicCrudOperations.shouldFindAllUsersSuccessfully -- Time elapsed: 0.002 s <<< ERROR!
+Tests run: 6, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 0.020 s <<< FAILURE! -- in com.demo.springboot.repository.UserRepositoryTest$BasicCrudOperations
+com.demo.springboot.repository.UserRepositoryTest$BasicCrudOperations.shouldFindAllUsersSuccessfully -- Time elapsed: 0.001 s <<< ERROR!
 jakarta.validation.ConstraintViolationException: 
 Validation failed for classes [com.demo.springboot.entity.User] during persist time for groups [jakarta.validation.groups.Default, ]
 List of constraint violations:[
@@ -133,7 +133,7 @@ List of constraint violations:[
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-com.demo.springboot.repository.UserRepositoryTest$BasicCrudOperations.shouldSaveUserSuccessfully -- Time elapsed: 0.003 s <<< ERROR!
+com.demo.springboot.repository.UserRepositoryTest$BasicCrudOperations.shouldSaveUserSuccessfully -- Time elapsed: 0.002 s <<< ERROR!
 jakarta.validation.ConstraintViolationException: 
 Validation failed for classes [com.demo.springboot.entity.User] during persist time for groups [jakarta.validation.groups.Default, ]
 List of constraint violations:[

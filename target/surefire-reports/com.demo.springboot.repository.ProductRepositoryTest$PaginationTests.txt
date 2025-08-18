@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.demo.springboot.repository.ProductRepositoryTest$PaginationTests
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.032 s <<< FAILURE! -- in com.demo.springboot.repository.ProductRepositoryTest$PaginationTests
-com.demo.springboot.repository.ProductRepositoryTest$PaginationTests.shouldReturnEmptyPageWhenNoProductsExist -- Time elapsed: 0.011 s <<< FAILURE!
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.037 s <<< FAILURE! -- in com.demo.springboot.repository.ProductRepositoryTest$PaginationTests
+com.demo.springboot.repository.ProductRepositoryTest$PaginationTests.shouldReturnEmptyPageWhenNoProductsExist -- Time elapsed: 0.016 s <<< FAILURE!
 java.lang.AssertionError: 
 
 Expecting empty but was: [Product{id=1, name='Laptop', description='High-performance laptop', price=999.99, quantity=10},
@@ -16,7 +16,7 @@ Expecting empty but was: [Product{id=1, name='Laptop', description='High-perform
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-com.demo.springboot.repository.ProductRepositoryTest$PaginationTests.shouldFindProductsWithPagination -- Time elapsed: 0.008 s <<< FAILURE!
+com.demo.springboot.repository.ProductRepositoryTest$PaginationTests.shouldFindProductsWithPagination -- Time elapsed: 0.009 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: 
 
 expected: 3L
@@ -31,7 +31,7 @@ expected: 3L
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-com.demo.springboot.repository.ProductRepositoryTest$PaginationTests.shouldFindSecondPageOfProducts -- Time elapsed: 0.006 s <<< FAILURE!
+com.demo.springboot.repository.ProductRepositoryTest$PaginationTests.shouldFindSecondPageOfProducts -- Time elapsed: 0.005 s <<< FAILURE!
 java.lang.AssertionError: 
 
 Expected size: 1 but was: 2 in:

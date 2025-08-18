@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.demo.springboot.config.SsrfProtectionFilterTest$UrlValidationTests
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 0.010 s <<< FAILURE! -- in com.demo.springboot.config.SsrfProtectionFilterTest$UrlValidationTests
-com.demo.springboot.config.SsrfProtectionFilterTest$UrlValidationTests.shouldBlockPrivateIpRanges -- Time elapsed: 0 s <<< FAILURE!
+Tests run: 10, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 0.011 s <<< FAILURE! -- in com.demo.springboot.config.SsrfProtectionFilterTest$UrlValidationTests
+com.demo.springboot.config.SsrfProtectionFilterTest$UrlValidationTests.shouldBlockPrivateIpRanges -- Time elapsed: 0.001 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -10,7 +10,7 @@ org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
 	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
 	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
 	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at com.demo.springboot.config.SsrfProtectionFilterTest$UrlValidationTests.shouldBlockPrivateIpRanges(SsrfProtectionFilterTest.java:57)
+	at com.demo.springboot.config.SsrfProtectionFilterTest$UrlValidationTests.shouldBlockPrivateIpRanges(SsrfProtectionFilterTest.java:60)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
@@ -24,13 +24,13 @@ org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
 	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
 	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
 	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at com.demo.springboot.config.SsrfProtectionFilterTest$UrlValidationTests.shouldBlockLinkLocalAddresses(SsrfProtectionFilterTest.java:90)
+	at com.demo.springboot.config.SsrfProtectionFilterTest$UrlValidationTests.shouldBlockLinkLocalAddresses(SsrfProtectionFilterTest.java:93)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-com.demo.springboot.config.SsrfProtectionFilterTest$UrlValidationTests.shouldBlockDockerInternalAddresses -- Time elapsed: 0 s <<< FAILURE!
+com.demo.springboot.config.SsrfProtectionFilterTest$UrlValidationTests.shouldBlockDockerInternalAddresses -- Time elapsed: 0.001 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -38,7 +38,7 @@ org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
 	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
 	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
 	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at com.demo.springboot.config.SsrfProtectionFilterTest$UrlValidationTests.shouldBlockDockerInternalAddresses(SsrfProtectionFilterTest.java:83)
+	at com.demo.springboot.config.SsrfProtectionFilterTest$UrlValidationTests.shouldBlockDockerInternalAddresses(SsrfProtectionFilterTest.java:86)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
@@ -52,7 +52,7 @@ org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
 	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
 	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
 	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at com.demo.springboot.config.SsrfProtectionFilterTest$UrlValidationTests.shouldBlockDocumentationAddresses(SsrfProtectionFilterTest.java:97)
+	at com.demo.springboot.config.SsrfProtectionFilterTest$UrlValidationTests.shouldBlockDocumentationAddresses(SsrfProtectionFilterTest.java:100)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
@@ -66,13 +66,13 @@ org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
 	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
 	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
 	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at com.demo.springboot.config.SsrfProtectionFilterTest$UrlValidationTests.shouldBlockLoopbackAddresses(SsrfProtectionFilterTest.java:66)
+	at com.demo.springboot.config.SsrfProtectionFilterTest$UrlValidationTests.shouldBlockLoopbackAddresses(SsrfProtectionFilterTest.java:69)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-com.demo.springboot.config.SsrfProtectionFilterTest$UrlValidationTests.shouldBlockCloudMetadataServices -- Time elapsed: 0 s <<< FAILURE!
+com.demo.springboot.config.SsrfProtectionFilterTest$UrlValidationTests.shouldBlockCloudMetadataServices -- Time elapsed: 0.001 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -80,7 +80,7 @@ org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
 	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
 	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
 	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at com.demo.springboot.config.SsrfProtectionFilterTest$UrlValidationTests.shouldBlockCloudMetadataServices(SsrfProtectionFilterTest.java:75)
+	at com.demo.springboot.config.SsrfProtectionFilterTest$UrlValidationTests.shouldBlockCloudMetadataServices(SsrfProtectionFilterTest.java:78)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)

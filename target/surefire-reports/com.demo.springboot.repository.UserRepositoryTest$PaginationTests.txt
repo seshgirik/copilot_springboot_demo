@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.demo.springboot.repository.UserRepositoryTest$PaginationTests
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 0.012 s <<< FAILURE! -- in com.demo.springboot.repository.UserRepositoryTest$PaginationTests
-com.demo.springboot.repository.UserRepositoryTest$PaginationTests.shouldFindSecondPageOfUsers -- Time elapsed: 0.001 s <<< ERROR!
+Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 0.013 s <<< FAILURE! -- in com.demo.springboot.repository.UserRepositoryTest$PaginationTests
+com.demo.springboot.repository.UserRepositoryTest$PaginationTests.shouldFindSecondPageOfUsers -- Time elapsed: 0.002 s <<< ERROR!
 jakarta.validation.ConstraintViolationException: 
 Validation failed for classes [com.demo.springboot.entity.User] during persist time for groups [jakarta.validation.groups.Default, ]
 List of constraint violations:[
@@ -34,7 +34,7 @@ List of constraint violations:[
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-com.demo.springboot.repository.UserRepositoryTest$PaginationTests.shouldReturnEmptyPageWhenNoUsersExist -- Time elapsed: 0.003 s <<< FAILURE!
+com.demo.springboot.repository.UserRepositoryTest$PaginationTests.shouldReturnEmptyPageWhenNoUsersExist -- Time elapsed: 0.004 s <<< FAILURE!
 java.lang.AssertionError: 
 
 Expecting empty but was: [User{id=1, name='John Doe', email='john@example.com', phone='1234567890', role='USER'},

@@ -338,7 +338,7 @@ security:
 ```bash
 # Test account lockout after 5 failed attempts
 for i in {1..6}; do
-  curl -X POST http://localhost:8080/auth/login \
+  curl -X POST http://localhost:8085/auth/login \
     -H "Content-Type: application/json" \
     -d '{"email":"john@example.com","password":"wrongpassword"}'
 done
@@ -348,14 +348,14 @@ done
 ```bash
 # Test rate limiting
 for i in {1..15}; do
-  curl http://localhost:8080/api/test/rate-limit
+  curl http://localhost:8085/api/test/rate-limit
 done
 ```
 
 ### Password Policy Test
 ```bash
 # Test strong password requirement
-curl -X POST http://localhost:8080/auth/register \
+curl -X POST http://localhost:8085/auth/register \
   -H "Content-Type: application/json" \
   -d '{"name":"Test User","email":"test@example.com","password":"weak"}'
 ```

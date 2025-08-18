@@ -1,55 +1,16 @@
 -------------------------------------------------------------------------------
 Test set: com.demo.springboot.config.JwtUtilTest$TokenGenerationTests
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 1, Errors: 3, Skipped: 0, Time elapsed: 0.010 s <<< FAILURE! -- in com.demo.springboot.config.JwtUtilTest$TokenGenerationTests
-com.demo.springboot.config.JwtUtilTest$TokenGenerationTests.shouldIncludeCorrectSubjectInToken -- Time elapsed: 0.001 s <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.demo.springboot.config.JwtUtilTest.setUp(JwtUtilTest.java:45)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-	at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:192)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-
-com.demo.springboot.config.JwtUtilTest$TokenGenerationTests.shouldGenerateValidToken -- Time elapsed: 0.001 s <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.demo.springboot.config.JwtUtilTest.setUp(JwtUtilTest.java:45)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-	at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:192)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-
-com.demo.springboot.config.JwtUtilTest$TokenGenerationTests.shouldIncludeExpirationInToken -- Time elapsed: 0.002 s <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.demo.springboot.config.JwtUtilTest.setUp(JwtUtilTest.java:45)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-	at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:192)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-
-com.demo.springboot.config.JwtUtilTest$TokenGenerationTests.shouldGenerateDifferentTokensForSameUser -- Time elapsed: 0.002 s <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: not equal but was: <eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QGV4YW1wbGUuY29tIiwiaWF0IjoxNzUzNTUyMzE4LCJleHAiOjE3NTM2Mzg3MTh9.J4UAa0NWwplzHnhW1pEguVzAJ5xvmioTgqDA0H2nTFE>
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.022 s <<< FAILURE! -- in com.demo.springboot.config.JwtUtilTest$TokenGenerationTests
+com.demo.springboot.config.JwtUtilTest$TokenGenerationTests.shouldGenerateDifferentTokensForSameUser -- Time elapsed: 0.016 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: not equal but was: <eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QGV4YW1wbGUuY29tIiwiaWF0IjoxNzUzNzAwMDEwLCJleHAiOjE3NTM3ODY0MTB9.nkY6S8Pc8qC6oIlnOu1YgyWSsoQ7bmbzsOOJaO02w8k>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 	at org.junit.jupiter.api.AssertNotEquals.failEqual(AssertNotEquals.java:277)
 	at org.junit.jupiter.api.AssertNotEquals.assertNotEquals(AssertNotEquals.java:263)
 	at org.junit.jupiter.api.AssertNotEquals.assertNotEquals(AssertNotEquals.java:258)
 	at org.junit.jupiter.api.Assertions.assertNotEquals(Assertions.java:2819)
-	at com.demo.springboot.config.JwtUtilTest$TokenGenerationTests.shouldGenerateDifferentTokensForSameUser(JwtUtilTest.java:135)
+	at com.demo.springboot.config.JwtUtilTest$TokenGenerationTests.shouldGenerateDifferentTokensForSameUser(JwtUtilTest.java:140)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)

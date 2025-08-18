@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: com.demo.springboot.repository.UserRepositoryTest$CustomQueryTests
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 0.018 s <<< FAILURE! -- in com.demo.springboot.repository.UserRepositoryTest$CustomQueryTests
+Tests run: 6, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 0.023 s <<< FAILURE! -- in com.demo.springboot.repository.UserRepositoryTest$CustomQueryTests
 com.demo.springboot.repository.UserRepositoryTest$CustomQueryTests.shouldFindUsersByPhoneAreaCode -- Time elapsed: 0.002 s <<< ERROR!
 jakarta.validation.ConstraintViolationException: 
 Validation failed for classes [com.demo.springboot.entity.User] during persist time for groups [jakarta.validation.groups.Default, ]
@@ -34,7 +34,7 @@ List of constraint violations:[
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-com.demo.springboot.repository.UserRepositoryTest$CustomQueryTests.shouldFindUsersByPhoneContaining -- Time elapsed: 0.001 s <<< ERROR!
+com.demo.springboot.repository.UserRepositoryTest$CustomQueryTests.shouldFindUsersByPhoneContaining -- Time elapsed: 0.002 s <<< ERROR!
 jakarta.validation.ConstraintViolationException: 
 Validation failed for classes [com.demo.springboot.entity.User] during persist time for groups [jakarta.validation.groups.Default, ]
 List of constraint violations:[
@@ -131,7 +131,7 @@ List of constraint violations:[
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-com.demo.springboot.repository.UserRepositoryTest$CustomQueryTests.shouldCheckIfUserExistsByEmail -- Time elapsed: 0.001 s <<< ERROR!
+com.demo.springboot.repository.UserRepositoryTest$CustomQueryTests.shouldCheckIfUserExistsByEmail -- Time elapsed: 0.002 s <<< ERROR!
 jakarta.validation.ConstraintViolationException: 
 Validation failed for classes [com.demo.springboot.entity.User] during persist time for groups [jakarta.validation.groups.Default, ]
 List of constraint violations:[

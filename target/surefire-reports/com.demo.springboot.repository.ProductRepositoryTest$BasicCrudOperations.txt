@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.demo.springboot.repository.ProductRepositoryTest$BasicCrudOperations
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.046 s <<< FAILURE! -- in com.demo.springboot.repository.ProductRepositoryTest$BasicCrudOperations
-com.demo.springboot.repository.ProductRepositoryTest$BasicCrudOperations.shouldFindAllProductsSuccessfully -- Time elapsed: 0.006 s <<< FAILURE!
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.043 s <<< FAILURE! -- in com.demo.springboot.repository.ProductRepositoryTest$BasicCrudOperations
+com.demo.springboot.repository.ProductRepositoryTest$BasicCrudOperations.shouldFindAllProductsSuccessfully -- Time elapsed: 0.004 s <<< FAILURE!
 java.lang.AssertionError: 
 
 Expected size: 3 but was: 8 in:

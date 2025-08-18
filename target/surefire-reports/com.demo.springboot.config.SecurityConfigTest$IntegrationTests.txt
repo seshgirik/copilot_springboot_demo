@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.demo.springboot.config.SecurityConfigTest$IntegrationTests
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0.057 s <<< FAILURE! -- in com.demo.springboot.config.SecurityConfigTest$IntegrationTests
-com.demo.springboot.config.SecurityConfigTest$IntegrationTests.shouldHandleCorsPreflightRequests -- Time elapsed: 0.054 s <<< ERROR!
+Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0.058 s <<< FAILURE! -- in com.demo.springboot.config.SecurityConfigTest$IntegrationTests
+com.demo.springboot.config.SecurityConfigTest$IntegrationTests.shouldHandleCorsPreflightRequests -- Time elapsed: 0.056 s <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "String.length()" because "source" is null
 	at org.springframework.util.StringUtils.uriDecode(StringUtils.java:815)
 	at org.springframework.web.util.UriUtils.decode(UriUtils.java:372)
@@ -13,27 +13,27 @@ java.lang.NullPointerException: Cannot invoke "String.length()" because "source"
 	at org.springframework.web.util.UrlPathHelper.getLookupPathForRequest(UrlPathHelper.java:244)
 	at org.springframework.web.cors.UrlBasedCorsConfigurationSource.resolvePath(UrlBasedCorsConfigurationSource.java:260)
 	at org.springframework.web.cors.UrlBasedCorsConfigurationSource.getCorsConfiguration(UrlBasedCorsConfigurationSource.java:244)
-	at com.demo.springboot.config.SecurityConfigTest$IntegrationTests.shouldHandleCorsPreflightRequests(SecurityConfigTest.java:259)
+	at com.demo.springboot.config.SecurityConfigTest$IntegrationTests.shouldHandleCorsPreflightRequests(SecurityConfigTest.java:280)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-com.demo.springboot.config.SecurityConfigTest$IntegrationTests.shouldConfigureCompleteSecuritySetup -- Time elapsed: 0.003 s <<< FAILURE!
+com.demo.springboot.config.SecurityConfigTest$IntegrationTests.shouldConfigureCompleteSecuritySetup -- Time elapsed: 0.002 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.NullPointerException: Cannot invoke "String.split(String)" because "this.allowedOrigins" is null
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
 	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
 	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
 	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3168)
-	at com.demo.springboot.config.SecurityConfigTest$IntegrationTests.shouldConfigureCompleteSecuritySetup(SecurityConfigTest.java:238)
+	at com.demo.springboot.config.SecurityConfigTest$IntegrationTests.shouldConfigureCompleteSecuritySetup(SecurityConfigTest.java:256)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 Caused by: java.lang.NullPointerException: Cannot invoke "String.split(String)" because "this.allowedOrigins" is null
-	at com.demo.springboot.config.SecurityConfig.corsConfigurationSource(SecurityConfig.java:76)
-	at com.demo.springboot.config.SecurityConfigTest$IntegrationTests.lambda$shouldConfigureCompleteSecuritySetup$0(SecurityConfigTest.java:240)
+	at com.demo.springboot.config.SecurityConfig.corsConfigurationSource(SecurityConfig.java:92)
+	at com.demo.springboot.config.SecurityConfigTest$IntegrationTests.lambda$shouldConfigureCompleteSecuritySetup$0(SecurityConfigTest.java:258)
 	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
 	... 7 more
 

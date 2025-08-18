@@ -1,23 +1,16 @@
 -------------------------------------------------------------------------------
 Test set: com.demo.springboot.config.SsrfProtectionFilterTest$EdgeCasesAndErrorHandling
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.071 s <<< FAILURE! -- in com.demo.springboot.config.SsrfProtectionFilterTest$EdgeCasesAndErrorHandling
-com.demo.springboot.config.SsrfProtectionFilterTest$EdgeCasesAndErrorHandling.shouldHandleResponseWriterExceptions -- Time elapsed: 0.068 s <<< FAILURE!
-org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.io.IOException> but was: <java.lang.NullPointerException>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.081 s <<< FAILURE! -- in com.demo.springboot.config.SsrfProtectionFilterTest$EdgeCasesAndErrorHandling
+com.demo.springboot.config.SsrfProtectionFilterTest$EdgeCasesAndErrorHandling.shouldHandleResponseWriterExceptions -- Time elapsed: 0.076 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected java.io.IOException to be thrown, but nothing was thrown.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
 	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
 	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
-	at com.demo.springboot.config.SsrfProtectionFilterTest$EdgeCasesAndErrorHandling.shouldHandleResponseWriterExceptions(SsrfProtectionFilterTest.java:304)
+	at com.demo.springboot.config.SsrfProtectionFilterTest$EdgeCasesAndErrorHandling.shouldHandleResponseWriterExceptions(SsrfProtectionFilterTest.java:307)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: java.lang.NullPointerException: Cannot invoke "String.split(String)" because "this.allowedSchemes" is null
-	at com.demo.springboot.config.SsrfProtectionFilter.isAllowedScheme(SsrfProtectionFilter.java:152)
-	at com.demo.springboot.config.SsrfProtectionFilter.isValidUrl(SsrfProtectionFilter.java:132)
-	at com.demo.springboot.config.SsrfProtectionFilter.doFilterInternal(SsrfProtectionFilter.java:77)
-	at com.demo.springboot.config.SsrfProtectionFilterTest$EdgeCasesAndErrorHandling.lambda$shouldHandleResponseWriterExceptions$1(SsrfProtectionFilterTest.java:305)
-	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
-	... 7 more
 

@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.demo.springboot.repository.ProductRepositoryTest$CustomQueryTests
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 0.040 s <<< FAILURE! -- in com.demo.springboot.repository.ProductRepositoryTest$CustomQueryTests
-com.demo.springboot.repository.ProductRepositoryTest$CustomQueryTests.shouldFindProductsByPriceRange -- Time elapsed: 0.005 s <<< FAILURE!
+Tests run: 5, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 0.044 s <<< FAILURE! -- in com.demo.springboot.repository.ProductRepositoryTest$CustomQueryTests
+com.demo.springboot.repository.ProductRepositoryTest$CustomQueryTests.shouldFindProductsByPriceRange -- Time elapsed: 0.006 s <<< FAILURE!
 java.lang.AssertionError: 
 
 Expected size: 2 but was: 3 in:
@@ -15,7 +15,7 @@ Expected size: 2 but was: 3 in:
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-com.demo.springboot.repository.ProductRepositoryTest$CustomQueryTests.shouldFindProductsWithHighStock -- Time elapsed: 0.005 s <<< FAILURE!
+com.demo.springboot.repository.ProductRepositoryTest$CustomQueryTests.shouldFindProductsWithHighStock -- Time elapsed: 0.006 s <<< FAILURE!
 java.lang.AssertionError: 
 
 Expected size: 2 but was: 4 in:
@@ -29,7 +29,7 @@ Expected size: 2 but was: 4 in:
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-com.demo.springboot.repository.ProductRepositoryTest$CustomQueryTests.shouldFindProductsInStock -- Time elapsed: 0.007 s <<< FAILURE!
+com.demo.springboot.repository.ProductRepositoryTest$CustomQueryTests.shouldFindProductsInStock -- Time elapsed: 0.008 s <<< FAILURE!
 java.lang.AssertionError: 
 
 Expected size: 2 but was: 7 in:
@@ -59,7 +59,7 @@ Expected size: 1 but was: 3 in:
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-com.demo.springboot.repository.ProductRepositoryTest$CustomQueryTests.shouldFindAffordableProductsUnderMaxPrice -- Time elapsed: 0.006 s <<< FAILURE!
+com.demo.springboot.repository.ProductRepositoryTest$CustomQueryTests.shouldFindAffordableProductsUnderMaxPrice -- Time elapsed: 0.007 s <<< FAILURE!
 java.lang.AssertionError: 
 
 Expected size: 2 but was: 7 in:
